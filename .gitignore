@@ -1,0 +1,7 @@
+# Local-only banner generator (reads commercial Castledown fonts from ~/Library/Fonts).
+# The rendered SVG (assets/header-castledown.svg) is committed; the generator is not.
+tools/
+
+# Local render/preview artifacts
+*.png
+.DS_Store
