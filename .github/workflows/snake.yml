@@ -29,6 +29,7 @@ jobs:
 
       - name: Push to output branch
         run: |
+          sudo chown -R "$(id -u):$(id -g)" dist
           cd dist
           git init -q
           git checkout -q -b output
