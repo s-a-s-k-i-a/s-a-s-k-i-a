@@ -66,6 +66,20 @@ DevOps · Hosting           ████████████░░░░░�
 
 ---
 
+## Shop · Produkte
+
+Eigene WordPress-Plugins & Tools über meinen **Easy-Digital-Downloads-Shop** auf [isla-stud.io](https://isla-stud.io) — free & paid, mit Lizenzierung und Auto-Updates.<br/>
+<sub><b>EN</b> — My own WordPress plugins & tools, shipped through my EDD shop — free & paid, with licensing & auto-updaters.</sub>
+
+| Produkt | Was es macht · what it does | |
+|---------|------------------------------|:--:|
+| [**FeedbackPilot**](https://isla-stud.io/downloads/feedbackpilot/) | Bug-Reports von Besucher:innen als GitHub-Issue — mit Screenshot, Browser- & Server-Kontext | ![Free](https://img.shields.io/badge/Free-d4a847?style=flat-square) |
+| [**WP2Amparex**](https://isla-stud.io/downloads/wp2amparex/) | Terminbuchung für WordPress mit **Amparex**-Anbindung — Kund:innen buchen online | ![Paid](https://img.shields.io/badge/Paid-ef6e6e?style=flat-square) |
+| [**EDD Docs Gateway**](https://isla-stud.io/downloads/edd-docs-gateway/) | Geschützte Produktdoku für EDD: GitHub-Wikis syncen & nur lizenzierten Kund:innen ausspielen | ![Paid](https://img.shields.io/badge/Paid-ef6e6e?style=flat-square) |
+| [**Betterplace Spendenformular**](https://isla-stud.io/downloads/betterplace-donation-formular-fuer-wordpress/) | betterplace.org-Spendenformulare in WordPress — Gutenberg-Block, Shortcode, Auto-Updates | ![Free](https://img.shields.io/badge/Free-d4a847?style=flat-square) |
+
+---
+
 ## Stack
 
 <div align="center">
