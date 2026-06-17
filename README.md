@@ -140,7 +140,7 @@ Kostenlose Plugins auf **WordPress.org**, kommerzielle Tools über meinen **EDD-
 <br/>
 
 <img height="172" src="https://github-readme-stats.vercel.app/api?username=s-a-s-k-i-a&show_icons=true&include_all_commits=true&hide_border=true&title_color=ef6e6e&icon_color=d4a847&text_color=2c292e&bg_color=f5f0eb" />
-<img height="172" src="https://github-readme-streak-stats.demolab.com?user=s-a-s-k-i-a&hide_border=true&background=f5f0eb&ring=ef6e6e&fire=ef6e6e&currStreakLabel=ef6e6e&sideLabels=2c292e&dates=9a8f86&currStreakNum=2c292e&sideNums=2c292e&dayLabels=2c292e&stroke=d4a847" />
+<img height="172" src="https://streak-stats.demolab.com/?user=s-a-s-k-i-a&hide_border=true&background=f5f0eb&ring=ef6e6e&fire=ef6e6e&currStreakLabel=ef6e6e&sideLabels=2c292e&dates=9a8f86&currStreakNum=2c292e&sideNums=2c292e&dayLabels=2c292e&stroke=d4a847" />
 
 <br/><br/>
 
