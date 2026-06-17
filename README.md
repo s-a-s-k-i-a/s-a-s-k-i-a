@@ -2,7 +2,7 @@
 
 <img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/header-castledown.svg" alt="Saskia Teichmann — WordPress & WooCommerce · Full-Stack-Webentwicklerin" width="100%" />
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Google+Sans&weight=600&size=19&duration=3200&pause=900&color=EF6E6E&center=true&vCenter=true&multiline=false&repeat=true&width=760&height=44&lines=WordPress+%26+WooCommerce+f%C3%BCr+Industrie+%26+Mittelstand;WordPress+%26+WooCommerce+for+industrial-scale+clients;Inhaberin+von+citelayer%C2%AE+%E2%80%94+AI+Visibility;I+ship+WP+plugins%2C+EDD+products+%26+AI+agent+tooling;Sauber+bauen.+Belegen.+Substanz+statt+Schein.)](https://github.com/s-a-s-k-i-a)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Google+Sans&weight=600&size=19&duration=3200&pause=900&color=EF6E6E&center=true&vCenter=true&multiline=false&repeat=true&width=760&height=44&lines=WordPress+%26+WooCommerce+f%C3%BCr+Industrie+%26+Mittelstand;WordPress+%26+WooCommerce+for+industrial-scale+clients;Inhaberin+von+citelayer%C2%AE+%E2%80%94+AI+Visibility;I+ship+WP+plugins%2C+EDD+products+%26+AI+agent+tooling;Sauber+bauen.+Belegen.+Solide%2C+nicht+laut.)](https://github.com/s-a-s-k-i-a)
 
 <br/>
 
@@ -29,7 +29,7 @@ uid=2013(saskia) groups=wordpress,woocommerce,edd,plugin-dev,ai-visibility,citel
 
 <sub><b>EN</b> — Full-stack web developer & WordPress / WooCommerce specialist for mid-size, large, and industrial clients. Founder of citelayer®, making brands visible and citable to AI. I ship production WP themes & plugins, EDD shops with licensing & auto-updaters, and AI-agent tooling on a self-hosted stack.</sub>
 
-> **Erst lesen, dann schreiben. Quelle nennen. Ursache statt Symptom. Substanz statt Schein.**
+> **Erst lesen, dann schreiben. Quelle nennen. Ursache statt Symptom. Solide, nicht laut.**
 
 ```text
 WordPress · WooCommerce    ████████████████████  custom themes · plugins · industrial-scale sites
