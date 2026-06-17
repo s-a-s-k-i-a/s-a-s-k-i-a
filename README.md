@@ -13,7 +13,7 @@
 <br/>
 
 [![Studio](https://img.shields.io/badge/isla--stud.io-Web%20Studio-ef6e6e?style=for-the-badge&logo=wordpress&logoColor=white)](https://isla-stud.io)
-[![citelayer](https://img.shields.io/badge/citelayer%C2%AE-AI%20Visibility-d4a847?style=for-the-badge&logoColor=white)](https://isla-stud.io)
+[![citelayer](https://img.shields.io/badge/citelayer%C2%AE-AI%20Visibility-6750A4?style=for-the-badge&logoColor=white)](https://citelayer-ai.com)
 ![Made in Germany](https://img.shields.io/badge/Made%20in-Germany%20%F0%9F%87%A9%F0%9F%87%AA-2c292e?style=for-the-badge)
 [![GitHub followers](https://img.shields.io/github/followers/s-a-s-k-i-a?style=for-the-badge&logo=github&logoColor=white&label=Follow&color=2c292e&cacheSeconds=86400)](https://github.com/s-a-s-k-i-a?tab=followers)
 
@@ -77,10 +77,10 @@ DevOps · Hosting           ████████████░░░░░�
 Kostenlose Plugins auf **WordPress.org**, kommerzielle Tools über meinen **EDD-Shop** ([isla-stud.io](https://isla-stud.io)) und **citelayer®** mit Pro-Add-ons auf **[citelayer.ai](https://citelayer.ai)** — alle mit Lizenzierung & Auto-Updates.<br/>
 <sub><b>EN</b> — Free plugins on WordPress.org, commercial tools via my EDD shop, and citelayer® with Pro add-ons on citelayer.ai — all with licensing & auto-updates.</sub>
 
-<a href="https://citelayer-ai.com" title="citelayer® — AI Visibility"><img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/citelayer-hero.svg" alt="citelayer® — AI SEO & Visibility for WordPress · llms.txt, Bot Analytics, Schema.org" width="100%" /></a>
+<a href="https://citelayer-ai.com" title="citelayer® — AI Visibility"><img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/citelayer-hero.svg" alt="citelayer® — AI Visibility · Get Found by AI · llms.txt, Bot Analytics, Schema.org" width="100%" /></a>
 
-[![citelayer · Free core on WordPress.org](https://img.shields.io/badge/WordPress.org-Free%20Core-21759B?style=for-the-badge&logo=wordpress&logoColor=white)](https://wordpress.org/plugins/citelayer/)
-[![citelayer.ai · Pro add-ons](https://img.shields.io/badge/citelayer.ai-Pro%20Add--ons-d4a847?style=for-the-badge&logoColor=white)](https://citelayer.ai)
+[![citelayer · Free core on WordPress.org](https://img.shields.io/badge/WordPress.org-Free%20Core-6750A4?style=for-the-badge&logo=wordpress&logoColor=white)](https://wordpress.org/plugins/citelayer/)
+[![citelayer.ai · Pro add-ons](https://img.shields.io/badge/citelayer.ai-Pro%20Add--ons-E19054?style=for-the-badge&logoColor=white)](https://citelayer.ai)
 
 ### EDD-Shop · weitere Plugins · more plugins
 
