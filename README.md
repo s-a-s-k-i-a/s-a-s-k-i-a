@@ -2,14 +2,14 @@
 
 <img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/header-castledown.svg" alt="Saskia Teichmann — WordPress & WooCommerce · Full-Stack-Webentwicklerin" width="100%" />
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Google+Sans&weight=600&size=19&duration=3200&pause=900&color=EF6E6E&center=true&vCenter=true&multiline=false&repeat=true&width=760&height=44&lines=WordPress+%26+WooCommerce+f%C3%BCr+Industrie+%26+Mittelstand;WordPress+%26+WooCommerce+for+industrial-scale+clients;Inhaberin+von+citelayer%C2%AE+%E2%80%94+AI+Visibility;I+ship+WP+plugins%2C+EDD+products+%26+AI+agent+tooling;Sauber+bauen.+Belegen.+Bauen%2C+das+bleibt.)](https://github.com/s-a-s-k-i-a)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Google+Sans&weight=600&size=19&duration=3200&pause=900&color=EF6E6E&center=true&vCenter=true&multiline=false&repeat=true&width=760&height=44&lines=WordPress+%26+WooCommerce+f%C3%BCr+Industrie+%26+Mittelstand;WordPress+%26+WooCommerce+for+industrial-scale+clients;Inhaberin+von+citelayer%C2%AE+%E2%80%94+AI+Visibility;I+ship+WP+plugins%2C+EDD+products+%26+AI+agent+tooling;Sauber+bauen.+Belegen.+Substanz+statt+Schein.)](https://github.com/s-a-s-k-i-a)
 
 <br/>
 
 [![Studio](https://img.shields.io/badge/isla--stud.io-Web%20Studio-ef6e6e?style=for-the-badge&logo=wordpress&logoColor=white)](https://isla-stud.io)
 [![citelayer](https://img.shields.io/badge/citelayer%C2%AE-AI%20Visibility-d4a847?style=for-the-badge&logoColor=white)](https://isla-stud.io)
 ![Made in Germany](https://img.shields.io/badge/Made%20in-Germany%20%F0%9F%87%A9%F0%9F%87%AA-2c292e?style=for-the-badge)
-[![GitHub followers](https://img.shields.io/github/followers/s-a-s-k-i-a?style=for-the-badge&logo=github&logoColor=white&label=Follow&color=2c292e)](https://github.com/s-a-s-k-i-a?tab=followers)
+[![GitHub followers](https://img.shields.io/github/followers/s-a-s-k-i-a?style=for-the-badge&logo=github&logoColor=white&label=Follow&color=2c292e&cacheSeconds=86400)](https://github.com/s-a-s-k-i-a?tab=followers)
 
 </div>
 
@@ -29,7 +29,7 @@ uid=2013(saskia) groups=wordpress,woocommerce,edd,plugin-dev,ai-visibility,citel
 
 <sub><b>EN</b> — Full-stack web developer & WordPress / WooCommerce specialist for mid-size, large, and industrial clients. Founder of citelayer®, making brands visible and citable to AI. I ship production WP themes & plugins, EDD shops with licensing & auto-updaters, and AI-agent tooling on a self-hosted stack.</sub>
 
-> **Erst lesen, dann schreiben. Quelle nennen. Ursache statt Symptom. Bauen, das bleibt.**
+> **Erst lesen, dann schreiben. Quelle nennen. Ursache statt Symptom. Substanz statt Schein.**
 
 ```text
 WordPress · WooCommerce    ████████████████████  custom themes · plugins · industrial-scale sites
@@ -45,10 +45,10 @@ DevOps · Hosting           ████████████░░░░░�
 
 | Project | What it does | Stars | Lang |
 |---------|--------------|:-----:|:----:|
-| [**cloudpanel-mail-addon**](https://github.com/s-a-s-k-i-a/cloudpanel-mail-addon) | DKIM, SPF & DMARC management addon for CloudPanel v2 — adds a Mail tab to every site | ![Stars](https://img.shields.io/github/stars/s-a-s-k-i-a/cloudpanel-mail-addon?style=flat-square&color=ef6e6e&label=%E2%98%85) | ![Shell](https://img.shields.io/badge/Shell-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white) |
-| [**claude-code-timestamps**](https://github.com/s-a-s-k-i-a/claude-code-timestamps) | Claude Code plugin: display timestamps for chat messages | ![Stars](https://img.shields.io/github/stars/s-a-s-k-i-a/claude-code-timestamps?style=flat-square&color=ef6e6e&label=%E2%98%85) | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) |
-| [**design-md-skill**](https://github.com/s-a-s-k-i-a/design-md-skill) | Claude Code skill: auto-generate a spec-conformant DESIGN.md from your existing design tokens | ![Stars](https://img.shields.io/github/stars/s-a-s-k-i-a/design-md-skill?style=flat-square&color=ef6e6e&label=%E2%98%85) | ![Markdown](https://img.shields.io/badge/Skill-CC785C?style=flat-square&logo=anthropic&logoColor=white) |
-| [**edd-sl-sdk-guide**](https://github.com/s-a-s-k-i-a/edd-sl-sdk-guide) | Drop-in guide for the EDD Software Licensing SDK — license + auto-updater in minutes, AI-agent friendly | ![Stars](https://img.shields.io/github/stars/s-a-s-k-i-a/edd-sl-sdk-guide?style=flat-square&color=ef6e6e&label=%E2%98%85) | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white) |
+| [**cloudpanel-mail-addon**](https://github.com/s-a-s-k-i-a/cloudpanel-mail-addon) | DKIM, SPF & DMARC management addon for CloudPanel v2 — adds a Mail tab to every site | ![Stars](https://img.shields.io/github/stars/s-a-s-k-i-a/cloudpanel-mail-addon?style=flat-square&color=ef6e6e&label=%E2%98%85&cacheSeconds=86400) | ![Shell](https://img.shields.io/badge/Shell-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white) |
+| [**claude-code-timestamps**](https://github.com/s-a-s-k-i-a/claude-code-timestamps) | Claude Code plugin: display timestamps for chat messages | ![Stars](https://img.shields.io/github/stars/s-a-s-k-i-a/claude-code-timestamps?style=flat-square&color=ef6e6e&label=%E2%98%85&cacheSeconds=86400) | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) |
+| [**design-md-skill**](https://github.com/s-a-s-k-i-a/design-md-skill) | Claude Code skill: auto-generate a spec-conformant DESIGN.md from your existing design tokens | ![Stars](https://img.shields.io/github/stars/s-a-s-k-i-a/design-md-skill?style=flat-square&color=ef6e6e&label=%E2%98%85&cacheSeconds=86400) | ![Markdown](https://img.shields.io/badge/Skill-CC785C?style=flat-square&logo=anthropic&logoColor=white) |
+| [**edd-sl-sdk-guide**](https://github.com/s-a-s-k-i-a/edd-sl-sdk-guide) | Drop-in guide for the EDD Software Licensing SDK — license + auto-updater in minutes, AI-agent friendly | ![Stars](https://img.shields.io/github/stars/s-a-s-k-i-a/edd-sl-sdk-guide?style=flat-square&color=ef6e6e&label=%E2%98%85&cacheSeconds=86400) | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white) |
 
 <details>
 <summary><b>More public projects</b></summary>
