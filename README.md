@@ -1,10 +1,12 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/header-castledown.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/header-castledown-light.svg" />
-  <img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/header-castledown.svg" alt="Saskia Teichmann — WordPress & WooCommerce · Full-Stack-Webentwicklerin" width="100%" />
-</picture>
+<a href="https://isla-stud.io" title="isla-stud.io — Saskia Teichmann, Web Studio">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/header-castledown.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/header-castledown-light.svg" />
+    <img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/header-castledown.svg" alt="Saskia Teichmann — WordPress & WooCommerce · Full-Stack-Webentwicklerin" width="100%" />
+  </picture>
+</a>
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Google+Sans&weight=600&size=19&duration=3200&pause=900&color=EF6E6E&center=true&vCenter=true&multiline=false&repeat=true&width=760&height=44&lines=WordPress+%26+WooCommerce+f%C3%BCr+Industrie+%26+Mittelstand;WordPress+%26+WooCommerce+for+industrial-scale+clients;Inhaberin+von+citelayer%C2%AE+%E2%80%94+AI+Visibility;I+ship+WP+plugins%2C+EDD+products+%26+AI+agent+tooling;Sauber+bauen.+Belegen.+Solide%2C+nicht+laut.)](https://github.com/s-a-s-k-i-a)
 
@@ -17,9 +19,9 @@
 
 </div>
 
-<img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/divider.svg" alt="" width="100%" />
+---
 
-<img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/h-whoami.svg" alt="whoami" />
+<a href="https://isla-stud.io"><img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/h-whoami.svg" alt="whoami" /></a>
 
 ```console
 $ whoami
@@ -43,9 +45,9 @@ AI Agent Tooling           ██████████████░░░�
 DevOps · Hosting           ████████████░░░░░░░░  CloudPanel · Nginx · Varnish · WP-CLI · DKIM/SPF/DMARC
 ```
 
-<img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/divider.svg" alt="" width="100%" />
+---
 
-<img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/h-featured.svg" alt="Featured Work · Projekte" />
+<a href="https://github.com/s-a-s-k-i-a?tab=repositories"><img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/h-featured.svg" alt="Featured Work · Projekte" /></a>
 
 | Project | What it does | Stars | Lang |
 |---------|--------------|:-----:|:----:|
@@ -68,14 +70,14 @@ DevOps · Hosting           ████████████░░░░░�
 
 > 📦 Der Großteil meiner Arbeit liegt in **privaten Kund:innen- & Produkt-Repos** (48+) — der Contribution-Graph unten zeigt diese Aktivität **anonym**: keine Repo-Namen, kein Code. _· Most of my work is private; the graph below reflects it anonymously._
 
-<img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/divider.svg" alt="" width="100%" />
+---
 
-<img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/h-products.svg" alt="Products · Produkte" />
+<a href="https://isla-stud.io"><img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/h-products.svg" alt="Products · Produkte" /></a>
 
 Kostenlose Plugins auf **WordPress.org**, kommerzielle Tools über meinen **EDD-Shop** ([isla-stud.io](https://isla-stud.io)) und **citelayer®** mit Pro-Add-ons auf **[citelayer.ai](https://citelayer.ai)** — alle mit Lizenzierung & Auto-Updates.<br/>
 <sub><b>EN</b> — Free plugins on WordPress.org, commercial tools via my EDD shop, and citelayer® with Pro add-ons on citelayer.ai — all with licensing & auto-updates.</sub>
 
-<img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/citelayer-hero.svg" alt="citelayer® — AI SEO & Visibility for WordPress · llms.txt, Bot Analytics, Schema.org" width="100%" />
+<a href="https://citelayer-ai.com" title="citelayer® — AI Visibility"><img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/citelayer-hero.svg" alt="citelayer® — AI SEO & Visibility for WordPress · llms.txt, Bot Analytics, Schema.org" width="100%" /></a>
 
 [![citelayer · Free core on WordPress.org](https://img.shields.io/badge/WordPress.org-Free%20Core-21759B?style=for-the-badge&logo=wordpress&logoColor=white)](https://wordpress.org/plugins/citelayer/)
 [![citelayer.ai · Pro add-ons](https://img.shields.io/badge/citelayer.ai-Pro%20Add--ons-d4a847?style=for-the-badge&logoColor=white)](https://citelayer.ai)
@@ -89,15 +91,15 @@ Kostenlose Plugins auf **WordPress.org**, kommerzielle Tools über meinen **EDD-
 | [**EDD Docs Gateway**](https://isla-stud.io/downloads/edd-docs-gateway/) | Geschützte Produktdoku für EDD: GitHub-Wikis syncen & nur lizenzierten Kund:innen ausspielen | ![Paid](https://img.shields.io/badge/Paid-ef6e6e?style=flat-square) |
 | [**Betterplace Spendenformular**](https://isla-stud.io/downloads/betterplace-donation-formular-fuer-wordpress/) | betterplace.org-Spendenformulare in WordPress — Gutenberg-Block, Shortcode, Auto-Updates | ![Free](https://img.shields.io/badge/Free-d4a847?style=flat-square) |
 
-<img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/divider.svg" alt="" width="100%" />
+---
 
-<img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/h-stack.svg" alt="Stack" />
+<a href="https://isla-stud.io"><img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/h-stack.svg" alt="Stack" /></a>
 
-<img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/stack-card.svg" alt="Stack — Languages: PHP, JavaScript, TypeScript, Python, CSS, HTML, Shell. WordPress: WordPress, WooCommerce, EDD, ACF Pro, WP-CLI, Composer. Infrastructure: Linux, Nginx, Varnish, MariaDB, CloudPanel, Git. AI & Agents: Claude, Claude Code, MCP." width="100%" />
+<a href="https://isla-stud.io" title="isla-stud.io"><img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/stack-card.svg" alt="Stack — Languages: PHP, JavaScript, TypeScript, Python, CSS, HTML, Shell. WordPress: WordPress, WooCommerce, EDD, ACF Pro, WP-CLI, Composer. Infrastructure: Linux, Nginx, Varnish, MariaDB, CloudPanel, Git. AI & Agents: Claude, Claude Code, MCP." width="100%" /></a>
 
-<img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/divider.svg" alt="" width="100%" />
+---
 
-<img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/h-activity.svg" alt="Activity · Aktivität" />
+<a href="https://github.com/s-a-s-k-i-a"><img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/h-activity.svg" alt="Activity · Aktivität" /></a>
 
 <div align="center">
 
@@ -105,28 +107,28 @@ Kostenlose Plugins auf **WordPress.org**, kommerzielle Tools über meinen **EDD-
 
 <br/><br/>
 
-<img height="172" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=s-a-s-k-i-a&theme=2077" />
+<a href="https://github.com/s-a-s-k-i-a"><img height="172" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=s-a-s-k-i-a&theme=2077" /></a>
 
 <br/>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=s-a-s-k-i-a&theme=react-dark&bg_color=17120f&color=ef6e6e&line=d4a847&point=ffffff&area=true&area_color=ef6e6e&hide_border=true" alt="activity graph" />
+<a href="https://github.com/s-a-s-k-i-a"><img src="https://github-readme-activity-graph.vercel.app/graph?username=s-a-s-k-i-a&theme=react-dark&bg_color=17120f&color=ef6e6e&line=d4a847&point=ffffff&area=true&area_color=ef6e6e&hide_border=true" alt="activity graph" /></a>
 
 <br/><br/>
 
-<img height="172" src="https://github-readme-stats.vercel.app/api?username=s-a-s-k-i-a&show_icons=true&include_all_commits=true&hide_border=true&title_color=ef6e6e&icon_color=d4a847&text_color=2c292e&bg_color=f5f0eb" />
-<img height="172" src="https://streak-stats.demolab.com/?user=s-a-s-k-i-a&hide_border=true&background=f5f0eb&ring=ef6e6e&fire=ef6e6e&currStreakLabel=ef6e6e&sideLabels=2c292e&dates=9a8f86&currStreakNum=2c292e&sideNums=2c292e&dayLabels=2c292e&stroke=d4a847" />
+<a href="https://github.com/s-a-s-k-i-a"><img height="172" src="https://github-readme-stats.vercel.app/api?username=s-a-s-k-i-a&show_icons=true&include_all_commits=true&hide_border=true&title_color=ef6e6e&icon_color=d4a847&text_color=2c292e&bg_color=f5f0eb" /></a>
+<a href="https://github.com/s-a-s-k-i-a"><img height="172" src="https://streak-stats.demolab.com/?user=s-a-s-k-i-a&hide_border=true&background=f5f0eb&ring=ef6e6e&fire=ef6e6e&currStreakLabel=ef6e6e&sideLabels=2c292e&dates=9a8f86&currStreakNum=2c292e&sideNums=2c292e&dayLabels=2c292e&stroke=d4a847" /></a>
 
 <br/><br/>
 
-<img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/output/github-snake-dark.svg" alt="contribution snake" />
+<a href="https://github.com/s-a-s-k-i-a"><img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/output/github-snake-dark.svg" alt="contribution snake" /></a>
 
 </div>
 
-<img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/divider.svg" alt="" width="100%" />
+---
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/h-reach.svg" alt="Reach me · Kontakt" />
+<a href="https://isla-stud.io"><img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/h-reach.svg" alt="Reach me · Kontakt" /></a>
 
 [![Website](https://img.shields.io/badge/isla--stud.io-ef6e6e?style=for-the-badge&logo=wordpress&logoColor=white)](https://isla-stud.io)
 [![GitHub](https://img.shields.io/badge/GitHub-2c292e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/s-a-s-k-i-a)
