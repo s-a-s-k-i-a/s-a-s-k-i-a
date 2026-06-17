@@ -1,6 +1,10 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/header-castledown.svg" alt="Saskia Teichmann — WordPress & WooCommerce · Full-Stack-Webentwicklerin" width="100%" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/header-castledown.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/header-castledown-light.svg" />
+  <img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/header-castledown.svg" alt="Saskia Teichmann — WordPress & WooCommerce · Full-Stack-Webentwicklerin" width="100%" />
+</picture>
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Google+Sans&weight=600&size=19&duration=3200&pause=900&color=EF6E6E&center=true&vCenter=true&multiline=false&repeat=true&width=760&height=44&lines=WordPress+%26+WooCommerce+f%C3%BCr+Industrie+%26+Mittelstand;WordPress+%26+WooCommerce+for+industrial-scale+clients;Inhaberin+von+citelayer%C2%AE+%E2%80%94+AI+Visibility;I+ship+WP+plugins%2C+EDD+products+%26+AI+agent+tooling;Sauber+bauen.+Belegen.+Solide%2C+nicht+laut.)](https://github.com/s-a-s-k-i-a)
 
@@ -89,43 +93,7 @@ Kostenlose Plugins auf **WordPress.org**, kommerzielle Tools über meinen **EDD-
 
 <img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/h-stack.svg" alt="Stack" />
 
-<div align="center">
-
-**Languages**
-
-![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![HTML](https://img.shields.io/badge/HTML-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![Shell](https://img.shields.io/badge/Shell-4EAA25?style=for-the-badge&logo=gnu-bash&logoColor=white)
-
-**WordPress Ecosystem**
-
-![WordPress](https://img.shields.io/badge/WordPress-21759B?style=for-the-badge&logo=wordpress&logoColor=white)
-![WooCommerce](https://img.shields.io/badge/WooCommerce-96588A?style=for-the-badge&logo=woocommerce&logoColor=white)
-![Easy Digital Downloads](https://img.shields.io/badge/Easy%20Digital%20Downloads-35495E?style=for-the-badge&logo=wordpress&logoColor=white)
-![ACF](https://img.shields.io/badge/ACF%20Pro-00D3AE?style=for-the-badge&logo=wordpress&logoColor=white)
-![WP-CLI](https://img.shields.io/badge/WP--CLI-2c292e?style=for-the-badge&logo=wordpress&logoColor=white)
-![Composer](https://img.shields.io/badge/Composer-885630?style=for-the-badge&logo=composer&logoColor=white)
-
-**Infrastructure & Tooling**
-
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
-![Varnish](https://img.shields.io/badge/Varnish-107DAC?style=for-the-badge&logo=varnish&logoColor=white)
-![MariaDB](https://img.shields.io/badge/MariaDB-003545?style=for-the-badge&logo=mariadb&logoColor=white)
-![CloudPanel](https://img.shields.io/badge/CloudPanel-1D4ED8?style=for-the-badge&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-
-**AI & Agents**
-
-![Claude](https://img.shields.io/badge/Claude-CC785C?style=for-the-badge&logo=anthropic&logoColor=white)
-![Claude Code](https://img.shields.io/badge/Claude%20Code-CC785C?style=for-the-badge&logo=anthropic&logoColor=white)
-![MCP](https://img.shields.io/badge/MCP-d4a847?style=for-the-badge&logo=anthropic&logoColor=white)
-
-</div>
+<img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/stack-card.svg" alt="Stack — Languages: PHP, JavaScript, TypeScript, Python, CSS, HTML, Shell. WordPress: WordPress, WooCommerce, EDD, ACF Pro, WP-CLI, Composer. Infrastructure: Linux, Nginx, Varnish, MariaDB, CloudPanel, Git. AI & Agents: Claude, Claude Code, MCP." width="100%" />
 
 <img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/divider.svg" alt="" width="100%" />
 
