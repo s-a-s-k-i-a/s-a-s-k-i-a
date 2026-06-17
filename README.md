@@ -66,10 +66,19 @@ DevOps · Hosting           ████████████░░░░░�
 
 ---
 
-## Shop · Produkte
+## Products · Produkte
 
-Eigene WordPress-Plugins & Tools über meinen **Easy-Digital-Downloads-Shop** auf [isla-stud.io](https://isla-stud.io) — free & paid, mit Lizenzierung und Auto-Updates.<br/>
-<sub><b>EN</b> — My own WordPress plugins & tools, shipped through my EDD shop — free & paid, with licensing & auto-updaters.</sub>
+Kostenlose Plugins auf **WordPress.org**, kommerzielle Tools über meinen **EDD-Shop** ([isla-stud.io](https://isla-stud.io)) und **citelayer®** mit Pro-Add-ons auf **[citelayer.ai](https://citelayer.ai)** — alle mit Lizenzierung & Auto-Updates.<br/>
+<sub><b>EN</b> — Free plugins on WordPress.org, commercial tools via my EDD shop, and citelayer® with Pro add-ons on citelayer.ai — all with licensing & auto-updates.</sub>
+
+### citelayer® — AI SEO & Visibility for WordPress
+
+`llms.txt` · Bot Analytics · Schema.org — mache deine Marke für KI **sichtbar & zitierbar**. Free Core auf WordPress.org, Pro-Add-ons auf citelayer.ai.
+
+[![citelayer · Free core on WordPress.org](https://img.shields.io/badge/WordPress.org-Free%20Core-21759B?style=for-the-badge&logo=wordpress&logoColor=white)](https://wordpress.org/plugins/citelayer/)
+[![citelayer.ai · Pro add-ons](https://img.shields.io/badge/citelayer.ai-Pro%20Add--ons-d4a847?style=for-the-badge&logoColor=white)](https://citelayer.ai)
+
+### EDD-Shop · weitere Plugins · more plugins
 
 | Produkt | Was es macht · what it does | |
 |---------|------------------------------|:--:|
