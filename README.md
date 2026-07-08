@@ -14,8 +14,8 @@
 
 [![Studio](https://img.shields.io/badge/isla--stud.io-Web%20Studio-ef6e6e?style=for-the-badge&logo=wordpress&logoColor=white)](https://isla-stud.io)
 [![citelayer](https://img.shields.io/badge/citelayer%C2%AE-AI%20Visibility-6750A4?style=for-the-badge&logoColor=white)](https://citelayer-ai.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Saskia%20Teichmann-0A66C2?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0yMC40NDcgMjAuNDUyaC0zLjU1NHYtNS41NjljMC0xLjMyOC0uMDI3LTMuMDM3LTEuODUyLTMuMDM3LTEuODUzIDAtMi4xMzYgMS40NDUtMi4xMzYgMi45Mzl2NS42NjdIOS4zNTFWOWgzLjQxNHYxLjU2MWguMDQ2Yy40NzctLjkgMS42MzctMS44NSAzLjM3LTEuODUgMy42MDEgMCA0LjI2NyAyLjM3IDQuMjY3IDUuNDU1djYuMjg2ek01LjMzNyA3LjQzM2MtMS4xNDQgMC0yLjA2My0uOTI2LTIuMDYzLTIuMDY1IDAtMS4xMzguOTItMi4wNjMgMi4wNjMtMi4wNjMgMS4xNCAwIDIuMDY0LjkyNSAyLjA2NCAyLjA2MyAwIDEuMTM5LS45MjUgMi4wNjUtMi4wNjQgMi4wNjV6bTEuNzgyIDEzLjAxOUgzLjU1NVY5aDMuNTY0djExLjQ1MnpNMjIuMjI1IDBIMS43NzFDLjc5MiAwIDAgLjc3NCAwIDEuNzI5djIwLjU0MkMwIDIzLjIyNy43OTIgMjQgMS43NzEgMjRoMjAuNDUxQzIzLjIgMjQgMjQgMjMuMjI3IDI0IDIyLjI3MVYxLjcyOUMyNCAuNzc0IDIzLjIgMCAyMi4yMjIgMHoiLz48L3N2Zz4=)](https://www.linkedin.com/in/saskia-teichmann-2b140410b/)
 ![Made in Germany](https://img.shields.io/badge/Made%20in-Germany%20%F0%9F%87%A9%F0%9F%87%AA-2c292e?style=for-the-badge)
-[![GitHub followers](https://img.shields.io/github/followers/s-a-s-k-i-a?style=for-the-badge&logo=github&logoColor=white&label=Follow&color=2c292e&cacheSeconds=86400)](https://github.com/s-a-s-k-i-a?tab=followers)
 
 </div>
 
@@ -29,6 +29,12 @@ saskia — full-stack web developer
 
 $ id saskia
 uid=2013(saskia) groups=wordpress,woocommerce,edd,plugin-dev,ai-visibility,citelayer,devops
+
+$ curl -s ipapi.co/city
+somewhere with good wifi and better light 🌴 — laptop first, office never
+
+$ echo $CORE_MARKET
+DACH 🇩🇪 — vornehmlich Deutschland
 ```
 
 **Full-Stack-Webentwicklerin** und Spezialistin für **WordPress & WooCommerce** — für Mittelstand, Großunternehmen und industrielle Kundschaft. Inhaberin von **citelayer®**: Marken für KI sichtbar und zitierbar machen. Ich baue produktive WordPress-Themes & -Plugins, **Easy-Digital-Downloads**-Shops mit Lizenzierung & Auto-Updates und **KI-Agenten-Tooling** (Claude-Code-Plugins & -Skills, MCP, agent-ready Docs) — auf selbst gehostetem CloudPanel / Nginx / Varnish-Stack.
@@ -51,10 +57,13 @@ DevOps · Hosting           ████████████░░░░░�
 
 | Project | What it does | Stars | Lang |
 |---------|--------------|:-----:|:----:|
+| [**ki-engineering-werkstatt**](https://github.com/s-a-s-k-i-a/ki-engineering-werkstatt) | 20 Phasen KI-Engineering auf Deutsch — von Tokenizer bis EU AI Act. Marimo-Notebooks, MIT. Work in progress — eins meiner offenen Experimente | ![Stars](https://img.shields.io/github/stars/s-a-s-k-i-a/ki-engineering-werkstatt?style=flat-square&color=ef6e6e&label=%E2%98%85&cacheSeconds=86400) | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) |
 | [**cloudpanel-mail-addon**](https://github.com/s-a-s-k-i-a/cloudpanel-mail-addon) | DKIM, SPF & DMARC management addon for CloudPanel v2 — adds a Mail tab to every site | ![Stars](https://img.shields.io/github/stars/s-a-s-k-i-a/cloudpanel-mail-addon?style=flat-square&color=ef6e6e&label=%E2%98%85&cacheSeconds=86400) | ![Shell](https://img.shields.io/badge/Shell-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white) |
 | [**claude-code-timestamps**](https://github.com/s-a-s-k-i-a/claude-code-timestamps) | Claude Code plugin: display timestamps for chat messages | ![Stars](https://img.shields.io/github/stars/s-a-s-k-i-a/claude-code-timestamps?style=flat-square&color=ef6e6e&label=%E2%98%85&cacheSeconds=86400) | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) |
 | [**design-md-skill**](https://github.com/s-a-s-k-i-a/design-md-skill) | Claude Code skill: auto-generate a spec-conformant DESIGN.md from your existing design tokens | ![Stars](https://img.shields.io/github/stars/s-a-s-k-i-a/design-md-skill?style=flat-square&color=ef6e6e&label=%E2%98%85&cacheSeconds=86400) | ![Markdown](https://img.shields.io/badge/Skill-CC785C?style=flat-square&logo=anthropic&logoColor=white) |
 | [**edd-sl-sdk-guide**](https://github.com/s-a-s-k-i-a/edd-sl-sdk-guide) | Drop-in guide for the EDD Software Licensing SDK — license + auto-updater in minutes, AI-agent friendly | ![Stars](https://img.shields.io/github/stars/s-a-s-k-i-a/edd-sl-sdk-guide?style=flat-square&color=ef6e6e&label=%E2%98%85&cacheSeconds=86400) | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white) |
+
+> 🧠 **In Arbeit: „agents-brain"** — mein Multi-Agenten-Team (Orchestrator, Content, Research, QA) lebt mit Identität & Gedächtnis als **Markdown in Git**, tool- und harness-unabhängig. Der Werkstattbericht dazu erscheint als Blog-Serie auf [isla-stud.io](https://isla-stud.io) — echte Dateien, echte Timestamps, echte Fehler. _· My agent team's identity & memory live as markdown in git, tool-agnostic. Workshop-report series coming soon (in German)._
 
 <details>
 <summary><b>More public projects</b></summary>
@@ -63,7 +72,6 @@ DevOps · Hosting           ████████████░░░░░�
 | Project | What it does | Lang |
 |---------|--------------|:----:|
 | [**betterplace-donation-embed**](https://github.com/s-a-s-k-i-a/betterplace-donation-embed) | Embed betterplace.org donation forms in WordPress — Gutenberg block, shortcode, auto-updates | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white) |
-| [**ki-engineering-werkstatt**](https://github.com/s-a-s-k-i-a/ki-engineering-werkstatt) | 20 phases of AI engineering in German — from tokenizer to the EU AI Act. Marimo notebooks, MIT | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) |
 | [**localized-sitemap-indexes**](https://github.com/s-a-s-k-i-a/localized-sitemap-indexes) | Language-specific XML sitemap indexes for TranslatePress sites using Rank Math SEO | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white) |
 
 </details>
@@ -131,6 +139,7 @@ Kostenlose Plugins auf **WordPress.org**, kommerzielle Tools über meinen **EDD-
 <a href="https://isla-stud.io"><img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/h-reach.svg" alt="Reach me · Kontakt" /></a>
 
 [![Website](https://img.shields.io/badge/isla--stud.io-ef6e6e?style=for-the-badge&logo=wordpress&logoColor=white)](https://isla-stud.io)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0yMC40NDcgMjAuNDUyaC0zLjU1NHYtNS41NjljMC0xLjMyOC0uMDI3LTMuMDM3LTEuODUyLTMuMDM3LTEuODUzIDAtMi4xMzYgMS40NDUtMi4xMzYgMi45Mzl2NS42NjdIOS4zNTFWOWgzLjQxNHYxLjU2MWguMDQ2Yy40NzctLjkgMS42MzctMS44NSAzLjM3LTEuODUgMy42MDEgMCA0LjI2NyAyLjM3IDQuMjY3IDUuNDU1djYuMjg2ek01LjMzNyA3LjQzM2MtMS4xNDQgMC0yLjA2My0uOTI2LTIuMDYzLTIuMDY1IDAtMS4xMzguOTItMi4wNjMgMi4wNjMtMi4wNjMgMS4xNCAwIDIuMDY0LjkyNSAyLjA2NCAyLjA2MyAwIDEuMTM5LS45MjUgMi4wNjUtMi4wNjQgMi4wNjV6bTEuNzgyIDEzLjAxOUgzLjU1NVY5aDMuNTY0djExLjQ1MnpNMjIuMjI1IDBIMS43NzFDLjc5MiAwIDAgLjc3NCAwIDEuNzI5djIwLjU0MkMwIDIzLjIyNy43OTIgMjQgMS43NzEgMjRoMjAuNDUxQzIzLjIgMjQgMjQgMjMuMjI3IDI0IDIyLjI3MVYxLjcyOUMyNCAuNzc0IDIzLjIgMCAyMi4yMjIgMHoiLz48L3N2Zz4=)](https://www.linkedin.com/in/saskia-teichmann-2b140410b/)
 [![GitHub](https://img.shields.io/badge/GitHub-2c292e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/s-a-s-k-i-a)
 
 <sub>WordPress since the 2010s · on GitHub since 2013 · building citelayer® today</sub>
