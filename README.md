@@ -14,6 +14,8 @@
 Für geschäftskritische E-Commerce-Systeme, digitale Plattformen und produktive KI.<br/>
 **Von der Entscheidung bis zum Code.**
 
+**WooCommerce Core Contributor · WordOps Contributor**
+
 <p>
   <a href="https://isla-stud.io/#gespraech"><strong>Vorhaben einordnen</strong></a>&nbsp; · &nbsp;
   <a href="https://isla-stud.io/projekte/">Projekte &amp; Systeme</a>&nbsp; · &nbsp;
@@ -70,6 +72,13 @@ Wenn aus dem Urteil eine belastbare Architektur, Roadmap oder technische Umsetzu
 ---
 
 ## Belege aus echten Systemen
+
+### Upstream Contributions
+
+Meine Arbeit endet nicht im eigenen Stack. Drei Fixes haben die Review- und CI-Ketten fremder Projekte durchlaufen und sind in deren Hauptcode gelandet:
+
+- **WooCommerce Core Contributor** — [PR #65607](https://github.com/woocommerce/woocommerce/pull/65607) verhindert, dass noch nicht gespeicherte Bestellpositionen beim Entfernen und erneuten Hinzufügen lautlos überschrieben werden.
+- **WordOps Contributor** — [PR #724](https://github.com/WordOps/WordOps/pull/724) härtet die Fehlerbehandlung bei Netzwerkproblemen; [PR #777](https://github.com/WordOps/WordOps/pull/777) liefert fehlende CSS- und JavaScript-Dateien mit dem korrekten MIME-Type aus.
 
 **Laufende Plattformen**<br/>
 Geschäftskritische Systeme in E-Commerce, Content, Ticketing und Betrieb — mit Architektur, Integrationen, Custom Engineering und technischer Verantwortung. [Projektberichte ansehen](https://isla-stud.io/projekte/).
