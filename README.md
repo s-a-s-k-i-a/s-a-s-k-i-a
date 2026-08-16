@@ -2,9 +2,8 @@
 
 <a href="https://isla-stud.io" title="isla-stud.io — Saskia Teichmann, Web Studio">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/header-castledown.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/header-castledown-light.svg" />
-    <img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/header-castledown.svg" alt="Saskia Teichmann — WordPress & WooCommerce · Full-Stack-Webentwicklerin" width="100%" />
+    <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/profile/guided-commit-tunnel-static.png" />
+    <img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/profile/guided-commit-tunnel.gif" alt="Ein leuchtendes True-North-Zeichen führt einen Impuls durch einen offenen Systemtunnel von der Eingabe über Architektur und Prüfung bis zum Ergebnis." width="100%" />
   </picture>
 </a>
 
