@@ -14,7 +14,7 @@
 Für geschäftskritische E-Commerce-Systeme, digitale Plattformen und produktive KI.<br/>
 **Von der Entscheidung bis zum Code.**
 
-**WooCommerce Core Contributor · WordOps Contributor**
+**WooCommerce Core Contributor · WordOps Contributor · Hermes Agent Contributor**
 
 <p>
   <a href="https://isla-stud.io/#gespraech"><strong>Vorhaben einordnen</strong></a>&nbsp; · &nbsp;
@@ -75,10 +75,11 @@ Wenn aus dem Urteil eine belastbare Architektur, Roadmap oder technische Umsetzu
 
 ### Upstream Contributions
 
-Meine Arbeit endet nicht im eigenen Stack. Drei Fixes haben die Review- und CI-Ketten fremder Projekte durchlaufen und sind in deren Hauptcode gelandet:
+Meine Arbeit endet nicht im eigenen Stack. Angenommene Fixes und laufende Upstream-Arbeit werden hier mit ihrem tatsächlichen Review-Status sichtbar:
 
 - **WooCommerce Core Contributor** — [PR #65607](https://github.com/woocommerce/woocommerce/pull/65607) verhindert, dass noch nicht gespeicherte Bestellpositionen beim Entfernen und erneuten Hinzufügen lautlos überschrieben werden.
 - **WordOps Contributor** — [PR #724](https://github.com/WordOps/WordOps/pull/724) härtet die Fehlerbehandlung bei Netzwerkproblemen; [PR #777](https://github.com/WordOps/WordOps/pull/777) liefert fehlende CSS- und JavaScript-Dateien mit dem korrekten MIME-Type aus.
+- **Hermes Agent Contributor** — [PR #70226](https://github.com/NousResearch/hermes-agent/pull/70226) behebt an der Approval-Grenze, dass begründete Ablehnungen ihren Grund verloren. Der maintainer-bestätigte Fix ist auf aktuellem `main` rebased und befindet sich im offenen Upstream-Review.
 
 **Laufende Plattformen**<br/>
 Geschäftskritische Systeme in E-Commerce, Content, Ticketing und Betrieb — mit Architektur, Integrationen, Custom Engineering und technischer Verantwortung. [Projektberichte ansehen](https://isla-stud.io/projekte/).
