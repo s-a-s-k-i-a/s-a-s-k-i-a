@@ -3,27 +3,27 @@
 <a href="https://isla-stud.io/" title="Saskia Teichmann · Isla Studio">
   <picture>
     <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/profile/guided-commit-tunnel-static.png" />
-    <img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/profile/guided-commit-tunnel.gif" alt="Ein leuchtendes True-North-Zeichen führt einen Impuls durch einen offenen Systemtunnel von der Entscheidung über Architektur und Prüfung bis zum Ergebnis." width="100%" />
+    <img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/profile/guided-commit-tunnel.gif" alt="A glowing True North mark guides a signal through an open system tunnel from decision to architecture, verification and outcome." width="100%" />
   </picture>
 </a>
 
 # Saskia Teichmann
 
-**Strategische Technologieberatung · Systemarchitektur · Engineering**
+**Technology strategy · Systems architecture · Full-stack engineering**
 
-Für geschäftskritische E-Commerce-Systeme, digitale Plattformen und produktive KI.<br/>
-**Von der Entscheidung bis zum Code.**
+For business-critical commerce, digital platforms and production AI.<br/>
+**From decision to code.**
 
 **WooCommerce Core Contributor · WordOps Contributor · Hermes Agent Contributor**
 
 <p>
-  <a href="https://isla-stud.io/#gespraech"><strong>Vorhaben einordnen</strong></a>&nbsp; · &nbsp;
-  <a href="https://isla-stud.io/projekte/">Projekte &amp; Systeme</a>&nbsp; · &nbsp;
-  <a href="https://isla-stud.io/blog/">Einblicke</a>&nbsp; · &nbsp;
+  <a href="https://isla-stud.io/#gespraech"><strong>Discuss a project</strong></a>&nbsp; · &nbsp;
+  <a href="https://isla-stud.io/projekte/">Projects &amp; systems</a>&nbsp; · &nbsp;
+  <a href="https://isla-stud.io/blog/">Insights</a>&nbsp; · &nbsp;
   <a href="https://www.linkedin.com/in/saskia-teichmann-2b140410b/">LinkedIn</a>
 </p>
 
-<sub>EN — Independent technology advisor and full-stack engineer for business-critical commerce, digital platforms and production AI.</sub>
+<sub>Deutschsprachige Beratung für DACH-Teams → <a href="https://isla-stud.io/beratung/">isla-stud.io/beratung</a></sub>
 
 </div>
 
@@ -34,105 +34,116 @@ Für geschäftskritische E-Commerce-Systeme, digitale Plattformen und produktive
 ```console
 $ whoami
 saskia
-↳ Beratung + Full-Stack
+↳ technology advisory + full-stack engineering
 
 $ ./trace
-Entscheidung → System → Code
+decision → system → code
 
 $ ./focus
-E-Commerce · Plattformen · KI
-WP/Woo: Tiefe, nicht Grenze
+commerce · platforms · production AI
+WordPress/WooCommerce: depth, not boundary
 
 $ ./verify
-lesen · belegen · Ursache lösen
+inspect · reproduce · prove · fix the cause
 ```
 
-Ich berate Geschäftsführung und Teams bei schwer reversiblen Technologieentscheidungen. Empfehlungen enden für mich nicht an einer Folie: Wenn eine Behauptung geprüft werden muss, gehe ich selbst in Architektur, Datenflüsse, Integrationen, Deployment, Betrieb und Code.
+I advise leadership teams when technology decisions are expensive, slow or difficult to reverse: platform choices, modernization, production AI, tangled legacy systems, or vendor claims that need evidence.
 
-Seit 2009 entwickle und betreibe ich produktive Websites, Shops und Anwendungen. Umsetzung ist möglich — aber nie die Voraussetzung für eine unabhängige Empfehlung.
+My recommendations do not end at a slide deck. If a claim needs testing, I follow it into architecture, data flows, integrations, deployment, operations and code.
 
-> **Entscheidung vor Technologie. Beleg vor Behauptung. Ursache statt Symptom.**
+I have built and operated production websites, commerce systems and applications since 2009. Implementation is available, but it is never a prerequisite for an independent recommendation.
 
----
-
-## Wofür ich gerufen werde
-
-**01 · Entscheidung klären**<br/>
-Wenn eine Plattform-, Modernisierungs-, Anbieter- oder KI-Entscheidung teuer, langsam oder schwer reversibel werden kann.
-
-**02 · Systemrealität prüfen**<br/>
-Wenn Management, Agentur und Entwicklung unterschiedliche Bilder von Risiken, Abhängigkeiten, Datenflüssen oder Folgekosten haben.
-
-**03 · Einen umsetzbaren Weg bauen**<br/>
-Wenn aus dem Urteil eine belastbare Architektur, Roadmap oder technische Umsetzung werden soll — ohne reflexhaften Tool- oder Plattformwechsel.
-
-[Beratungsformate ansehen](https://isla-stud.io/beratung/) ·
-[E-Commerce-System-Review](https://isla-stud.io/beratung/e-commerce-system-review/)
+> **Decision before technology. Evidence before claims. Causes before symptoms.**
 
 ---
 
-## Belege aus echten Systemen
+## What I am brought in for
 
-### Upstream Contributions
+**01 · Clarify the decision**<br/>
+When a platform, modernization, vendor or AI decision could become costly to reverse.
 
-Meine Arbeit endet nicht im eigenen Stack. Angenommene Fixes und laufende Upstream-Arbeit werden hier mit ihrem tatsächlichen Review-Status sichtbar:
+**02 · Establish system reality**<br/>
+When leadership, agencies and engineering teams hold different pictures of risk, dependencies, data flows or downstream cost.
 
-- **WooCommerce Core Contributor** — [PR #65607](https://github.com/woocommerce/woocommerce/pull/65607) verhindert, dass noch nicht gespeicherte Bestellpositionen beim Entfernen und erneuten Hinzufügen lautlos überschrieben werden.
-- **WordOps Contributor** — [PR #724](https://github.com/WordOps/WordOps/pull/724) härtet die Fehlerbehandlung bei Netzwerkproblemen; [PR #777](https://github.com/WordOps/WordOps/pull/777) liefert fehlende CSS- und JavaScript-Dateien mit dem korrekten MIME-Type aus.
-- **Hermes Agent Contributor** — [PR #70226](https://github.com/NousResearch/hermes-agent/pull/70226) behebt an der Approval-Grenze, dass begründete Ablehnungen ihren Grund verloren. Der maintainer-bestätigte Fix ist auf aktuellem `main` rebased und befindet sich im offenen Upstream-Review.
+**03 · Build a route to delivery**<br/>
+When the decision needs to become a sound architecture, a practical roadmap or working software — without a reflexive tool or platform migration.
 
-**Laufende Plattformen**<br/>
-Geschäftskritische Systeme in E-Commerce, Content, Ticketing und Betrieb — mit Architektur, Integrationen, Custom Engineering und technischer Verantwortung. [Projektberichte ansehen](https://isla-stud.io/projekte/).
+[Advisory formats](https://isla-stud.io/beratung/) ·
+[E-commerce system review](https://isla-stud.io/beratung/e-commerce-system-review/)
 
-**Eigene Systeme und Produkte**<br/>
-Unter anderem citelayer®, Funnelboard, WP2Amparex und FeedbackPilot. Sie belegen Produktentwicklung und Betrieb; sie sind nicht meine gesamte Identität. [Plugins & Downloads ansehen](https://isla-stud.io/downloads/).
+---
 
-**Offenes Engineering**<br/>
-Kleine und große Werkstücke, an denen sich Arbeitsweise, Dokumentation und technische Tiefe direkt prüfen lassen:
+## Evidence from real systems
 
-- [**cloudpanel-mail-addon**](https://github.com/s-a-s-k-i-a/cloudpanel-mail-addon) — DKIM, SPF und DMARC dort beherrschbar machen, wo der Server tatsächlich betrieben wird.
-- [**hermes-kimi-code**](https://github.com/s-a-s-k-i-a/hermes-kimi-code) — klar begrenzte, fail-closed Delegation für einen produktiven Agenten-Workflow.
-- [**design-md-skill**](https://github.com/s-a-s-k-i-a/design-md-skill) — vorhandene Design-Tokens in einen belastbaren, agentenlesbaren Vertrag übersetzen.
-- [**tax-proof-coupons**](https://github.com/s-a-s-k-i-a/tax-proof-coupons) — WooCommerce-Geschäftslogik so lösen, dass wechselnde Umsatzsteuersätze das Ergebnis nicht verfälschen.
-- [**edd-sl-sdk-guide**](https://github.com/s-a-s-k-i-a/edd-sl-sdk-guide) — Lizenzierung und Auto-Updates für Menschen und Coding-Agenten nachvollziehbar integrierbar machen.
-- [**claude-code-timestamps**](https://github.com/s-a-s-k-i-a/claude-code-timestamps) — ein kleines Werkzeug mit einem klaren Zweck; nützliche Details dürfen auch einfach Freude machen.
+### Merged upstream work
+
+- **WooCommerce Core — merged.** [PR #65607](https://github.com/woocommerce/woocommerce/pull/65607) prevents unsaved order items from being silently overwritten during remove-and-readd cycles.
+- **WordOps — merged.** [PR #724](https://github.com/WordOps/WordOps/pull/724) hardens download error handling when a network exception has no reason; [PR #777](https://github.com/WordOps/WordOps/pull/777) serves missing CSS and JavaScript files with the correct MIME type.
+- **html2canvas-pro — merged and released.** [PR #213](https://github.com/yorickshan/html2canvas-pro/pull/213) keeps text-range offsets aligned after `text-transform`; the maintainer confirmed the fix in v2.0.4.
+
+### Active upstream work
+
+- **WordPress Core — patch in review.** [PR #11610](https://github.com/WordPress/wordpress-develop/pull/11610), attached to [Trac #42281](https://core.trac.wordpress.org/ticket/42281), makes translation updates individually selectable and deferrable. Human reviewer feedback is incorporated and focused regression coverage is included; the patch remains open.
+- **Hermes Agent — open review.** [PR #70226](https://github.com/NousResearch/hermes-agent/pull/70226) preserves the reason for a denied action across the approval boundary. The upstream review confirmed the underlying propagation bug and the fix was rebased to current `main`.
+
+### Upstream diagnostics
+
+- **Divi 5 — two fixed reports, one active audit.** [#317](https://github.com/elegantthemes/Divi-Beta/issues/317) and [#329](https://github.com/elegantthemes/Divi-Beta/issues/329) are closed as fixed. [#332](https://github.com/elegantthemes/Divi-Beta/issues/332) remains open with controlled version-to-version reproductions, clean-install evidence and source-level patch proposals for the remaining CSS-generation regressions.
+
+### Systems I build and operate
+
+**Production platforms**<br/>
+Business-critical systems across commerce, content, ticketing and operations — including architecture, integrations, custom engineering and technical ownership. [Read the project reports](https://isla-stud.io/projekte/).
+
+**Products and independent systems**<br/>
+citelayer®, Funnelboard, WP2Amparex and FeedbackPilot are examples of product development and ongoing operations. They are evidence of the work, not the whole identity. [Explore plugins and downloads](https://isla-stud.io/downloads/).
+
+**Open engineering**<br/>
+Selected repositories where the reasoning, implementation and documentation are directly inspectable:
+
+- [**cloudpanel-mail-addon**](https://github.com/s-a-s-k-i-a/cloudpanel-mail-addon) — make DKIM, SPF and DMARC manageable where the server is actually operated.
+- [**hermes-kimi-code**](https://github.com/s-a-s-k-i-a/hermes-kimi-code) — bounded, fail-closed delegation for a production agent workflow.
+- [**design-md-skill**](https://github.com/s-a-s-k-i-a/design-md-skill) — turn existing design tokens into a dependable, agent-readable contract.
+- [**tax-proof-coupons**](https://github.com/s-a-s-k-i-a/tax-proof-coupons) — preserve correct WooCommerce voucher logic across changing tax rates.
+- [**edd-sl-sdk-guide**](https://github.com/s-a-s-k-i-a/edd-sl-sdk-guide) — make licensing and automatic updates understandable to humans and coding agents.
+- [**claude-code-timestamps**](https://github.com/s-a-s-k-i-a/claude-code-timestamps) — a small tool with one clear purpose; useful details are allowed to be delightful.
 
 <details>
-<summary><strong>Weitere offene Werkstücke aus der Werkstatt</strong></summary>
+<summary><strong>More open workshop pieces</strong></summary>
 <br/>
 
-- [ki-engineering-werkstatt](https://github.com/s-a-s-k-i-a/ki-engineering-werkstatt) — offene Lern- und Experimentierstrecke, ausdrücklich Work in Progress.
-- [betterplace-donation-embed](https://github.com/s-a-s-k-i-a/betterplace-donation-embed) — Spendenformulare als Gutenberg-Block und Shortcode mit Update-Pfad.
-- [localized-sitemap-indexes](https://github.com/s-a-s-k-i-a/localized-sitemap-indexes) — sprachspezifische Sitemap-Indizes für TranslatePress und Rank Math.
+- [ki-engineering-werkstatt](https://github.com/s-a-s-k-i-a/ki-engineering-werkstatt) — an open learning and experimentation track, explicitly work in progress.
+- [betterplace-donation-embed](https://github.com/s-a-s-k-i-a/betterplace-donation-embed) — donation forms as a Gutenberg block and shortcode, with an update path.
+- [localized-sitemap-indexes](https://github.com/s-a-s-k-i-a/localized-sitemap-indexes) — language-specific sitemap indexes for TranslatePress and Rank Math.
 
 </details>
 
 ---
 
-## Wie ich arbeite
+## How I work
 
-**Geschäftsfrage zuerst** — Technik wird nicht zum Selbstzweck, sondern erklärt Entscheidung, Risiko und Folgekosten.
+**Start with the business question** — technology explains the decision, risk and downstream cost; it is not the point of the exercise.
 
-**Unabhängig prüfen** — keine Plattform empfehlen, nur weil sie vertraut, verkaufbar oder gerade laut ist.
+**Verify independently** — I do not recommend a platform because it is familiar, easy to sell or currently loud.
 
-**So tief wie nötig** — vom Gespräch mit der Geschäftsführung bis zu API-Antwort, Log, Deployment oder Codepfad.
+**Go as deep as the decision requires** — from a leadership conversation to an API response, log, deployment or code path.
 
-**Betrieb mitdenken** — Datenhoheit, Freigaben, Wartbarkeit und Verantwortlichkeiten gehören zur Architektur.
+**Design for operations** — data control, approval boundaries, maintainability and ownership belong in the architecture.
 
-Mehr aus der laufenden Arbeit: [Isla Einblicke](https://isla-stud.io/blog/) · [Agents-Brain-Serie](https://isla-stud.io/tag/agents-brain/)
+From the working bench: [Isla Insights](https://isla-stud.io/blog/) · [Agents Brain series](https://isla-stud.io/tag/agents-brain/)
 
 ---
 
 <details>
-<summary><strong>Und die Commit-Schlange?</strong></summary>
+<summary><strong>And the commit snake?</strong></summary>
 <br/>
 
-Sie darf bleiben. Aber als Easter Egg — nicht als Kompetenzbeweis.
+It stays. As an Easter egg — not as a competence score.
 
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/output/github-snake-dark.svg" />
-    <img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/output/github-snake.svg" alt="Eine animierte Schlange wandert durch Saskias GitHub-Beitragsraster." width="100%" />
+    <img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/output/github-snake.svg" alt="An animated snake moves through Saskia's GitHub contribution grid." width="100%" />
   </picture>
 </div>
 
@@ -140,10 +151,10 @@ Sie darf bleiben. Aber als Easter Egg — nicht als Kompetenzbeweis.
 
 ---
 
-## Wenn die Entscheidung tragen muss
+## When the decision has to hold
 
-Wenn ein System geschäftskritisch ist und die falsche Entscheidung teuer, langsam oder schwer reversibel wäre, lohnt sich eine unabhängige Einordnung vor der Umsetzung.
+If a system is business-critical and the wrong decision would be expensive to unwind, an independent technical assessment should happen before implementation.
 
-**[Vorhaben einordnen](https://isla-stud.io/#gespraech)** · [isla-stud.io](https://isla-stud.io/) · [LinkedIn](https://www.linkedin.com/in/saskia-teichmann-2b140410b/)
+**[Discuss a project](https://isla-stud.io/#gespraech)** · [isla-stud.io](https://isla-stud.io/) · [LinkedIn](https://www.linkedin.com/in/saskia-teichmann-2b140410b/)
 
-<sub>Hannover · DACH · laptop-first. WordPress und WooCommerce seit den 2010ern; Full-Stack-Entwicklung seit 2009.</sub>
+<sub>Full-stack engineering since 2009 · WordPress and WooCommerce: depth, not boundary.</sub>
