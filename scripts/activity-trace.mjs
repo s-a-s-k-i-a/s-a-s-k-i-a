@@ -14,7 +14,7 @@ const LOGO_PATH = resolve(ASSET_DIR, "true-north-icon.png");
 const USERNAME = "s-a-s-k-i-a";
 const STATS_URL =
   process.env.ACTIVITY_STATS_URL ||
-  `https://github-readme-stats-mu-drab-12.vercel.app/api?username=${USERNAME}&include_all_commits=true&rank_icon=percentile&hide_border=true`;
+  `https://github-readme-stats-mu-drab-12.vercel.app/api?username=${USERNAME}&include_all_commits=true&rank_icon=percentile&hide_border=true&activity_trace=1`;
 const PUBLIC_COMMITS_URL =
   process.env.ACTIVITY_PUBLIC_COMMITS_URL ||
   `https://api.github.com/search/commits?q=author%3A${USERNAME}&per_page=1`;
@@ -238,18 +238,33 @@ async function fetchChecked(url, expectedType) {
 }
 
 export async function fetchActivityData() {
-  const [statsResponse, publicResponse] = await Promise.all([
-    fetchChecked(STATS_URL, "image/svg+xml"),
-    fetchChecked(PUBLIC_COMMITS_URL, "application/json"),
-  ]);
-  const [statsSvg, publicPayload] = await Promise.all([
-    statsResponse.text(),
-    publicResponse.json(),
-  ]);
-  return buildActivityData(
-    parsePrivateInclusiveStats(statsSvg),
-    parsePublicCommits(publicPayload),
-  );
+  let lastError;
+  for (let attempt = 1; attempt <= 3; attempt += 1) {
+    try {
+      const [statsResponse, publicResponse] = await Promise.all([
+        fetchChecked(STATS_URL, "image/svg+xml"),
+        fetchChecked(PUBLIC_COMMITS_URL, "application/json"),
+      ]);
+      const [statsSvg, publicPayload] = await Promise.all([
+        statsResponse.text(),
+        publicResponse.json(),
+      ]);
+      return buildActivityData(
+        parsePrivateInclusiveStats(statsSvg),
+        parsePublicCommits(publicPayload),
+      );
+    } catch (error) {
+      lastError = error;
+      if (attempt < 3) {
+        await new Promise((resolveDelay) =>
+          setTimeout(resolveDelay, attempt * 1_000),
+        );
+      }
+    }
+  }
+  throw new Error("Activity aggregate refresh failed after three attempts.", {
+    cause: lastError,
+  });
 }
 
 function replaceElementText(svg, attribute, value, replacement) {
