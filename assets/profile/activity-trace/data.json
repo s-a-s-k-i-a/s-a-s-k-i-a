@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "username": "s-a-s-k-i-a",
+  "publicCommits": 195,
+  "totalCommits": 3864,
+  "outsidePublicCommits": 3669,
+  "outsidePublicPercent": 95,
+  "pullRequests": 980,
+  "issues": 1875,
+  "rank": "A-",
+  "percentile": 35.3,
+  "sources": {
+    "public": "GitHub public commit search",
+    "privateInclusive": "GitHub Readme Stats heuristic"
+  }
+}
