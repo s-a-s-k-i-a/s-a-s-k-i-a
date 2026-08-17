@@ -23,6 +23,8 @@ const STATS_URL =
 const PUBLIC_COMMITS_URL =
   process.env.ACTIVITY_PUBLIC_COMMITS_URL ||
   `https://api.github.com/search/commits?q=author%3A${USERNAME}&per_page=1`;
+const GITHUB_GRAPHQL_URL =
+  process.env.ACTIVITY_GITHUB_GRAPHQL_URL || "https://api.github.com/graphql";
 
 const LOGO_SHA256 =
   "cd4b188bca3bd43dd8e70ceb6811e286f9a9d14253b02dfcfa33fcd62e2589bc";
@@ -34,29 +36,37 @@ const FONT_BOLD_SHA256 =
 const TOP_LEVEL_KEYS = [
   "schemaVersion",
   "username",
-  "publicCommits",
-  "totalCommits",
-  "outsidePublicCommits",
-  "outsidePublicPercent",
-  "pullRequests",
-  "issues",
-  "rank",
-  "percentile",
+  "contributions",
+  "searchAggregates",
+  "rankHeuristic",
   "sources",
+];
+const CONTRIBUTION_KEYS = ["allTime", "rollingYear", "from", "to"];
+const SEARCH_AGGREGATE_KEYS = [
+  "publicCommits",
+  "privateInclusiveCommits",
+  "privateInclusivePullRequests",
+  "privateInclusiveIssues",
+];
+const RANK_KEYS = ["rank", "percentile"];
+const SOURCE_KEYS = [
+  "contributions",
+  "publicCommitSearch",
+  "privateInclusiveSearch",
 ];
 
 const VARIANTS = {
   desktop: {
     logicalWidth: 1280,
     outputWidth: 2560,
-    trackWidth: 628,
-    minimumPublicWidth: 34,
+    contributionTrackWidth: 628,
+    minimumRollingWidth: 34,
   },
   mobile: {
     logicalWidth: 720,
     outputWidth: 1440,
-    trackWidth: 540,
-    minimumPublicWidth: 30,
+    contributionTrackWidth: 540,
+    minimumRollingWidth: 30,
   },
 };
 
@@ -92,13 +102,68 @@ function parseDecimal(value, label) {
   return parsed;
 }
 
+function assertExactKeys(value, expected, label) {
+  if (!value || typeof value !== "object" || Array.isArray(value)) {
+    throw new Error(`${label} must be an object.`);
+  }
+  const actual = Object.keys(value);
+  if (
+    actual.length !== expected.length ||
+    expected.some((key) => !actual.includes(key))
+  ) {
+    throw new Error(`${label} contains missing or unapproved keys.`);
+  }
+}
+
+function parseDateOnly(value, label) {
+  const match = String(value).match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!match) {
+    throw new Error(`Invalid ${label}: ${value}`);
+  }
+  const year = Number.parseInt(match[1], 10);
+  const month = Number.parseInt(match[2], 10);
+  const day = Number.parseInt(match[3], 10);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  if (
+    date.getUTCFullYear() !== year ||
+    date.getUTCMonth() !== month - 1 ||
+    date.getUTCDate() !== day
+  ) {
+    throw new Error(`Invalid ${label}: ${value}`);
+  }
+  return { year, month, day };
+}
+
+function formatDateOnly(year, month, day) {
+  return `${String(year).padStart(4, "0")}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+}
+
+function daysInMonth(year, month) {
+  return new Date(Date.UTC(year, month, 0)).getUTCDate();
+}
+
+export function contributionWindow(asOf = process.env.ACTIVITY_AS_OF) {
+  const current = asOf || new Date().toISOString().slice(0, 10);
+  const { year, month, day } = parseDateOnly(current, "activity date");
+  const fromYear = year - 1;
+  const fromDay = Math.min(day, daysInMonth(fromYear, month));
+  const from = formatDateOnly(fromYear, month, fromDay);
+  const to = formatDateOnly(year, month, day);
+  return {
+    from,
+    to,
+    fromDateTime: `${from}T00:00:00Z`,
+    toDateTime: `${to}T23:59:59Z`,
+  };
+}
+
 export function parsePrivateInclusiveStats(svg) {
   if (typeof svg !== "string" || svg.length < 100 || svg.length > 250_000) {
     throw new Error("Private-inclusive aggregate response has an unexpected size.");
   }
 
   return {
-    totalCommits: parseInteger(
+    commits: parseInteger(
       requireMatch(svg, /Total Commits\s*:\s*([\d,]+)/i, "total commits"),
       "total commits",
     ),
@@ -136,35 +201,114 @@ export function parsePublicCommits(payload) {
   return parseInteger(payload.total_count, "public commits");
 }
 
-export function buildActivityData(privateInclusive, publicCommits) {
-  const totalCommits = parseInteger(
-    privateInclusive.totalCommits,
-    "total commits",
+export function parseContributionYears(data) {
+  const years = data?.user?.contributionsCollection?.contributionYears;
+  if (!Array.isArray(years) || years.length === 0) {
+    throw new Error("GitHub contribution years are missing.");
+  }
+  const currentYear = new Date().getUTCFullYear();
+  const normalized = years.map((year) => parseInteger(year, "contribution year"));
+  if (
+    normalized.some((year) => year < 2008 || year > currentYear) ||
+    new Set(normalized).size !== normalized.length
+  ) {
+    throw new Error("GitHub contribution years are invalid.");
+  }
+  return normalized.sort((a, b) => b - a);
+}
+
+export function buildContributionTotalsQuery(years, window) {
+  const sortedYears = [...years].sort((a, b) => b - a);
+  if (!sortedYears.length || new Set(sortedYears).size !== sortedYears.length) {
+    throw new Error("Contribution-year query requires unique years.");
+  }
+  const toYear = parseDateOnly(window.to, "rolling-window end").year;
+  const selections = sortedYears.map((year) => {
+    const parsedYear = parseInteger(year, "contribution year");
+    if (parsedYear < 2008 || parsedYear > toYear) {
+      throw new Error(`Invalid contribution year: ${parsedYear}`);
+    }
+    const to =
+      parsedYear === toYear
+        ? window.toDateTime
+        : `${parsedYear}-12-31T23:59:59Z`;
+    return `y${parsedYear}: contributionsCollection(from: "${parsedYear}-01-01T00:00:00Z", to: "${to}") { contributionCalendar { totalContributions } }`;
+  });
+  selections.push(
+    `rolling: contributionsCollection(from: "${window.fromDateTime}", to: "${window.toDateTime}") { contributionCalendar { totalContributions } }`,
   );
+  return `query ActivityContributionTotals($login: String!) { user(login: $login) { ${selections.join(" ")} } }`;
+}
+
+export function parseContributionTotals(data, years, window) {
+  const user = data?.user;
+  if (!user || typeof user !== "object") {
+    throw new Error("GitHub contribution totals are missing.");
+  }
+  const allTime = years.reduce((sum, year) => {
+    const total = user[`y${year}`]?.contributionCalendar?.totalContributions;
+    return sum + parseInteger(total, `contributions in ${year}`);
+  }, 0);
+  const rollingYear = parseInteger(
+    user.rolling?.contributionCalendar?.totalContributions,
+    "rolling-year contributions",
+  );
+  if (rollingYear > allTime) {
+    throw new Error("Rolling-year contributions cannot exceed all-time contributions.");
+  }
+  return {
+    allTime,
+    rollingYear,
+    from: window.from,
+    to: window.to,
+  };
+}
+
+export function buildActivityData(contributions, privateInclusive, publicCommits) {
   const publicCount = parseInteger(publicCommits, "public commits");
-  if (publicCount > totalCommits) {
+  const privateInclusiveCommits = parseInteger(
+    privateInclusive.commits,
+    "private-inclusive commits",
+  );
+  if (publicCount > privateInclusiveCommits) {
     throw new Error("Public commits cannot exceed private-inclusive commits.");
   }
 
-  const outsidePublicCommits = totalCommits - publicCount;
-  const outsidePublicPercent = totalCommits
-    ? Math.round((outsidePublicCommits / totalCommits) * 100)
-    : 0;
-
   const data = {
-    schemaVersion: 1,
+    schemaVersion: 2,
     username: USERNAME,
-    publicCommits: publicCount,
-    totalCommits,
-    outsidePublicCommits,
-    outsidePublicPercent,
-    pullRequests: parseInteger(privateInclusive.pullRequests, "pull requests"),
-    issues: parseInteger(privateInclusive.issues, "issues"),
-    rank: String(privateInclusive.rank),
-    percentile: parseDecimal(privateInclusive.percentile, "rank percentile"),
+    contributions: {
+      allTime: parseInteger(contributions.allTime, "all-time contributions"),
+      rollingYear: parseInteger(
+        contributions.rollingYear,
+        "rolling-year contributions",
+      ),
+      from: String(contributions.from),
+      to: String(contributions.to),
+    },
+    searchAggregates: {
+      publicCommits: publicCount,
+      privateInclusiveCommits,
+      privateInclusivePullRequests: parseInteger(
+        privateInclusive.pullRequests,
+        "private-inclusive pull requests",
+      ),
+      privateInclusiveIssues: parseInteger(
+        privateInclusive.issues,
+        "private-inclusive issues",
+      ),
+    },
+    rankHeuristic: {
+      rank: String(privateInclusive.rank),
+      percentile: parseDecimal(
+        privateInclusive.percentile,
+        "rank percentile",
+      ),
+    },
     sources: {
-      public: "GitHub public commit search",
-      privateInclusive: "GitHub Readme Stats heuristic",
+      contributions: "GitHub contribution calendars",
+      publicCommitSearch: "GitHub public commit search",
+      privateInclusiveSearch: "GitHub Readme Stats heuristic",
     },
   };
 
@@ -173,53 +317,69 @@ export function buildActivityData(privateInclusive, publicCommits) {
 }
 
 export function validateActivityData(data) {
-  if (!data || typeof data !== "object" || Array.isArray(data)) {
-    throw new Error("Activity data must be an object.");
-  }
-  const keys = Object.keys(data);
-  if (
-    keys.length !== TOP_LEVEL_KEYS.length ||
-    TOP_LEVEL_KEYS.some((key) => !keys.includes(key))
-  ) {
-    throw new Error("Activity data contains missing or unapproved top-level keys.");
-  }
-  if (data.schemaVersion !== 1 || data.username !== USERNAME) {
+  assertExactKeys(data, TOP_LEVEL_KEYS, "Activity data");
+  if (data.schemaVersion !== 2 || data.username !== USERNAME) {
     throw new Error("Activity data schema or username does not match.");
   }
-  for (const key of [
-    "publicCommits",
-    "totalCommits",
-    "outsidePublicCommits",
-    "outsidePublicPercent",
-    "pullRequests",
-    "issues",
-  ]) {
-    parseInteger(data[key], key);
+
+  assertExactKeys(data.contributions, CONTRIBUTION_KEYS, "Contribution data");
+  const allTime = parseInteger(
+    data.contributions.allTime,
+    "all-time contributions",
+  );
+  const rollingYear = parseInteger(
+    data.contributions.rollingYear,
+    "rolling-year contributions",
+  );
+  if (rollingYear > allTime) {
+    throw new Error("Rolling-year contributions cannot exceed all-time contributions.");
   }
-  if (data.publicCommits + data.outsidePublicCommits !== data.totalCommits) {
-    throw new Error("Activity commit aggregates do not add up.");
-  }
-  const expectedOutsidePercent = data.totalCommits
-    ? Math.round((data.outsidePublicCommits / data.totalCommits) * 100)
-    : 0;
-  if (data.outsidePublicPercent !== expectedOutsidePercent) {
-    throw new Error("Activity commit percentage does not match the aggregates.");
-  }
-  if (!/^(S|A\+|A|A-|B\+|B|B-|C\+|C)$/.test(data.rank)) {
-    throw new Error(`Unexpected rank: ${data.rank}`);
-  }
-  parseDecimal(data.percentile, "rank percentile");
+  const from = parseDateOnly(data.contributions.from, "rolling-window start");
+  const to = parseDateOnly(data.contributions.to, "rolling-window end");
   if (
-    !data.sources ||
-    typeof data.sources !== "object" ||
-    Array.isArray(data.sources) ||
-    JSON.stringify(Object.keys(data.sources).sort()) !==
-    JSON.stringify(["privateInclusive", "public"])
+    Date.UTC(from.year, from.month - 1, from.day) >=
+    Date.UTC(to.year, to.month - 1, to.day)
   ) {
-    throw new Error("Activity sources contain unapproved keys.");
+    throw new Error("Rolling contribution window is not chronological.");
   }
+
+  assertExactKeys(
+    data.searchAggregates,
+    SEARCH_AGGREGATE_KEYS,
+    "Search aggregates",
+  );
+  for (const key of SEARCH_AGGREGATE_KEYS) {
+    parseInteger(data.searchAggregates[key], key);
+  }
+  if (
+    data.searchAggregates.publicCommits >
+    data.searchAggregates.privateInclusiveCommits
+  ) {
+    throw new Error("Public commits cannot exceed private-inclusive commits.");
+  }
+
+  assertExactKeys(data.rankHeuristic, RANK_KEYS, "Rank heuristic");
+  if (!/^(S|A\+|A|A-|B\+|B|B-|C\+|C)$/.test(data.rankHeuristic.rank)) {
+    throw new Error(`Unexpected rank: ${data.rankHeuristic.rank}`);
+  }
+  parseDecimal(data.rankHeuristic.percentile, "rank percentile");
+
+  assertExactKeys(data.sources, SOURCE_KEYS, "Activity sources");
+  const expectedSources = {
+    contributions: "GitHub contribution calendars",
+    publicCommitSearch: "GitHub public commit search",
+    privateInclusiveSearch: "GitHub Readme Stats heuristic",
+  };
+  if (JSON.stringify(data.sources) !== JSON.stringify(expectedSources)) {
+    throw new Error("Activity sources do not match the approved source labels.");
+  }
+
   const serialized = JSON.stringify(data);
-  if (/repo(?:sitory)?[_ -]?name|customer|client|commit[_ -]?message|email/i.test(serialized)) {
+  if (
+    /repo(?:sitory)?[_ -]?name|customer|client|commit[_ -]?message|email/i.test(
+      serialized,
+    )
+  ) {
     throw new Error("Activity data contains private metadata fields.");
   }
   return data;
@@ -246,11 +406,59 @@ async function fetchChecked(url, expectedType) {
   return response;
 }
 
+async function fetchGitHubGraphql(query) {
+  const token = process.env.ACTIVITY_GITHUB_TOKEN || process.env.GITHUB_TOKEN;
+  if (!token) {
+    throw new Error("GITHUB_TOKEN is required for contribution aggregates.");
+  }
+  const response = await fetch(GITHUB_GRAPHQL_URL, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      Authorization: `Bearer ${token}`,
+      "Content-Type": "application/json",
+      "User-Agent": `${USERNAME}-activity-trace`,
+    },
+    body: JSON.stringify({ query, variables: { login: USERNAME } }),
+    signal: AbortSignal.timeout(20_000),
+  });
+  if (!response.ok) {
+    throw new Error(`GitHub GraphQL returned HTTP ${response.status}.`);
+  }
+  const contentType = response.headers.get("content-type") || "";
+  if (!contentType.toLowerCase().includes("application/json")) {
+    throw new Error(
+      `GitHub GraphQL returned unexpected content type: ${contentType || "missing"}.`,
+    );
+  }
+  const payload = await response.json();
+  if (Array.isArray(payload.errors) && payload.errors.length) {
+    throw new Error("GitHub GraphQL returned contribution-query errors.");
+  }
+  if (!payload.data) {
+    throw new Error("GitHub GraphQL returned no contribution data.");
+  }
+  return payload.data;
+}
+
+async function fetchContributionData() {
+  const yearsPayload = await fetchGitHubGraphql(
+    "query ActivityContributionYears($login: String!) { user(login: $login) { contributionsCollection { contributionYears } } }",
+  );
+  const years = parseContributionYears(yearsPayload);
+  const window = contributionWindow();
+  const totalsPayload = await fetchGitHubGraphql(
+    buildContributionTotalsQuery(years, window),
+  );
+  return parseContributionTotals(totalsPayload, years, window);
+}
+
 export async function fetchActivityData() {
   let lastError;
   for (let attempt = 1; attempt <= 3; attempt += 1) {
     try {
-      const [statsResponse, publicResponse] = await Promise.all([
+      const [contributions, statsResponse, publicResponse] = await Promise.all([
+        fetchContributionData(),
         fetchChecked(STATS_URL, "image/svg+xml"),
         fetchChecked(PUBLIC_COMMITS_URL, "application/json"),
       ]);
@@ -259,6 +467,7 @@ export async function fetchActivityData() {
         publicResponse.json(),
       ]);
       return buildActivityData(
+        contributions,
         parsePrivateInclusiveStats(statsSvg),
         parsePublicCommits(publicPayload),
       );
@@ -317,16 +526,18 @@ export function hydrateTemplate(template, data, logoDataUri, variantName) {
     throw new Error("True North logo must be embedded as a PNG data URI.");
   }
 
-  const publicWidth = data.totalCommits
-    ? Math.max(
-        variant.minimumPublicWidth,
-        Math.round(variant.trackWidth * (data.publicCommits / data.totalCommits)),
+  const rollingPercent = data.contributions.allTime
+    ? Math.round(
+        (data.contributions.rollingYear / data.contributions.allTime) * 100,
       )
     : 0;
-  const outsideWidth = data.totalCommits
-    ? Math.round(
-        variant.trackWidth *
-          (data.outsidePublicCommits / data.totalCommits),
+  const rollingWidth = data.contributions.allTime
+    ? Math.max(
+        variant.minimumRollingWidth,
+        Math.round(
+          variant.contributionTrackWidth *
+            (data.contributions.rollingYear / data.contributions.allTime),
+        ),
       )
     : 0;
 
@@ -334,49 +545,59 @@ export function hydrateTemplate(template, data, logoDataUri, variantName) {
   svg = replaceElementText(
     svg,
     "id",
+    "all-time-contributions",
+    formatNumber(data.contributions.allTime),
+  );
+  svg = replaceElementText(
+    svg,
+    "id",
+    "rolling-contributions",
+    formatNumber(data.contributions.rollingYear),
+  );
+  svg = replaceElementText(
+    svg,
+    "id",
+    "rolling-percent",
+    String(rollingPercent),
+  );
+  svg = replaceElementText(
+    svg,
+    "id",
     "public-commits",
-    formatNumber(data.publicCommits),
-  );
-  svg = replaceElementText(
-    svg,
-    "id",
-    "outside-public-percent",
-    String(data.outsidePublicPercent),
-  );
-  svg = replaceElementText(
-    svg,
-    "id",
-    "outside-public-commits",
-    formatNumber(data.outsidePublicCommits),
+    formatNumber(data.searchAggregates.publicCommits),
   );
   svg = replaceElementText(
     svg,
     "data-dyn",
-    "total-commits",
-    formatNumber(data.totalCommits),
+    "private-inclusive-commits",
+    formatNumber(data.searchAggregates.privateInclusiveCommits),
   );
   svg = replaceElementText(
     svg,
     "id",
-    "total-commits",
-    formatNumber(data.totalCommits),
+    "private-inclusive-commits",
+    formatNumber(data.searchAggregates.privateInclusiveCommits),
   );
   svg = replaceElementText(
     svg,
     "id",
     "pull-requests",
-    formatNumber(data.pullRequests),
+    formatNumber(data.searchAggregates.privateInclusivePullRequests),
   );
-  svg = replaceElementText(svg, "id", "issues", formatNumber(data.issues));
-  svg = replaceElementText(svg, "id", "rank", data.rank);
+  svg = replaceElementText(
+    svg,
+    "id",
+    "issues",
+    formatNumber(data.searchAggregates.privateInclusiveIssues),
+  );
+  svg = replaceElementText(svg, "id", "rank", data.rankHeuristic.rank);
   svg = replaceElementText(
     svg,
     "id",
     "percentile",
-    data.percentile.toFixed(1),
+    data.rankHeuristic.percentile.toFixed(1),
   );
-  svg = replaceRoleWidth(svg, "public-fill", publicWidth);
-  svg = replaceRoleWidth(svg, "outside-fill", outsideWidth);
+  svg = replaceRoleWidth(svg, "rolling-fill", rollingWidth);
 
   if (svg.includes("{{") || svg.includes("logo-true-north-sticker")) {
     throw new Error("Activity Trace template still contains an unresolved asset.");
@@ -447,7 +668,7 @@ async function main() {
   }
   await renderActivityTrace(data);
   process.stdout.write(
-    `Activity Trace: ${formatNumber(data.publicCommits)} public / ${formatNumber(data.totalCommits)} total commits, rank ${data.rank}.\n`,
+    `Activity Trace: ${formatNumber(data.contributions.allTime)} all-time / ${formatNumber(data.contributions.rollingYear)} rolling-year contributions; ${formatNumber(data.searchAggregates.privateInclusiveCommits)} private-inclusive commit-search results; rank ${data.rankHeuristic.rank}.\n`,
   );
 }
 
@@ -457,6 +678,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
 
 export {
   ASSET_DIR,
+  CONTRIBUTION_KEYS,
   DATA_PATH,
   FONT_BOLD_PATH,
   FONT_BOLD_SHA256,
@@ -464,6 +686,9 @@ export {
   FONT_REGULAR_SHA256,
   LOGO_PATH,
   LOGO_SHA256,
+  RANK_KEYS,
+  SEARCH_AGGREGATE_KEYS,
+  SOURCE_KEYS,
   TOP_LEVEL_KEYS,
   VARIANTS,
 };

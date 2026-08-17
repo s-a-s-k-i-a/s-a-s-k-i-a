@@ -43,6 +43,8 @@ jobs:
       - name: Refresh aggregate data and render assets
         if: github.event_name != 'pull_request'
         run: npm run activity:refresh
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
 
       - name: Verify schema, privacy boundary and image outputs
         run: npm test
@@ -69,5 +71,5 @@ jobs:
             assets/profile/activity-trace/desktop.png \
             assets/profile/activity-trace/mobile.svg \
             assets/profile/activity-trace/mobile.png
-          git commit -m "chore(profile): refresh activity trace [skip ci]"
+          git commit -m "chore(profile): refresh activity trace"
           git push

@@ -125,13 +125,13 @@ Selected repositories where the reasoning, implementation and documentation are 
 <div align="center">
   <a href="./docs/activity-trace.md" title="How the Activity Trace is calculated">
     <picture>
-      <source media="(max-width: 600px)" srcset="./assets/profile/activity-trace/mobile.png" />
-      <img src="./assets/profile/activity-trace/desktop.png" alt="A tactile lavender Activity Trace compares public commits with the larger private-inclusive total, merges both streams into an explicitly heuristic activity rank, and lists aggregate commits, pull requests and issues." width="100%" />
+      <source media="(max-width: 600px)" srcset="./assets/profile/activity-trace/mobile.png?v=3" />
+      <img src="./assets/profile/activity-trace/desktop.png?v=3" alt="A tactile lavender Activity Trace leads with all-time and rolling-year GitHub contributions, then separately shows private-inclusive search aggregates and an explicitly heuristic GitHub Readme Stats rank." width="100%" />
     </picture>
   </a>
 </div>
 
-<sub>Refreshed from public GitHub search and a private-inclusive aggregate source. Only counts and ratios are published; repository names, clients, code and commit text stay private. The rank is a GitHub Readme Stats heuristic, not an official GitHub score. <a href="./docs/activity-trace.md">Method and privacy boundary</a>.</sub>
+<sub>GitHub contribution-calendar totals include public activity and anonymized private activity when profile sharing is enabled. Contributions and commit-search totals are different units: the latter remain a separate private-inclusive search trace. Only aggregate counts are published; repository names, clients, code and commit text stay private. The rank is a GitHub Readme Stats heuristic, not an official GitHub score. <a href="./docs/activity-trace.md">Method and privacy boundary</a>.</sub>
 
 ---
 

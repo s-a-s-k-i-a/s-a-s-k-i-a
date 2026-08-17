@@ -6,15 +6,23 @@ import test from "node:test";
 
 import {
   ASSET_DIR,
+  CONTRIBUTION_KEYS,
   DATA_PATH,
   FONT_BOLD_PATH,
   FONT_BOLD_SHA256,
   FONT_REGULAR_PATH,
   FONT_REGULAR_SHA256,
   LOGO_SHA256,
+  RANK_KEYS,
+  SEARCH_AGGREGATE_KEYS,
+  SOURCE_KEYS,
   TOP_LEVEL_KEYS,
   VARIANTS,
   buildActivityData,
+  buildContributionTotalsQuery,
+  contributionWindow,
+  parseContributionTotals,
+  parseContributionYears,
   parsePrivateInclusiveStats,
   parsePublicCommits,
   validateActivityData,
@@ -32,37 +40,102 @@ function readPngDimensions(bytes) {
   };
 }
 
-test("parses only aggregate values from the two sources", () => {
+test("parses aggregate search values without treating them as contributions", () => {
   const statsSvg = `
     <svg>
       <title>Saskia Teichmann's GitHub Stats, Rank: A-</title>
-      <desc>Total Stars Earned: 27, Total Commits  : 3864, Total PRs: 980, Total Issues: 1875</desc>
+      <desc>Total Stars Earned: 27, Total Commits  : 3885, Total PRs: 991, Total Issues: 1876</desc>
       <text data-testid="percentile-rank-value">35.3%</text>
     </svg>`;
   const privateInclusive = parsePrivateInclusiveStats(statsSvg);
   const publicCommits = parsePublicCommits({
-    total_count: 195,
+    total_count: 196,
     incomplete_results: false,
   });
-  assert.deepEqual(buildActivityData(privateInclusive, publicCommits), {
-    schemaVersion: 1,
+  const data = buildActivityData(
+    {
+      allTime: 6908,
+      rollingYear: 6494,
+      from: "2025-08-17",
+      to: "2026-08-17",
+    },
+    privateInclusive,
+    publicCommits,
+  );
+
+  assert.deepEqual(data, {
+    schemaVersion: 2,
     username: "s-a-s-k-i-a",
-    publicCommits: 195,
-    totalCommits: 3864,
-    outsidePublicCommits: 3669,
-    outsidePublicPercent: 95,
-    pullRequests: 980,
-    issues: 1875,
-    rank: "A-",
-    percentile: 35.3,
+    contributions: {
+      allTime: 6908,
+      rollingYear: 6494,
+      from: "2025-08-17",
+      to: "2026-08-17",
+    },
+    searchAggregates: {
+      publicCommits: 196,
+      privateInclusiveCommits: 3885,
+      privateInclusivePullRequests: 991,
+      privateInclusiveIssues: 1876,
+    },
+    rankHeuristic: {
+      rank: "A-",
+      percentile: 35.3,
+    },
     sources: {
-      public: "GitHub public commit search",
-      privateInclusive: "GitHub Readme Stats heuristic",
+      contributions: "GitHub contribution calendars",
+      publicCommitSearch: "GitHub public commit search",
+      privateInclusiveSearch: "GitHub Readme Stats heuristic",
     },
   });
 });
 
-test("rejects incomplete or impossible aggregates", () => {
+test("builds a bounded rolling window and all-history contribution query", () => {
+  const window = contributionWindow("2026-08-17");
+  assert.deepEqual(window, {
+    from: "2025-08-17",
+    to: "2026-08-17",
+    fromDateTime: "2025-08-17T00:00:00Z",
+    toDateTime: "2026-08-17T23:59:59Z",
+  });
+
+  const query = buildContributionTotalsQuery([2026, 2025, 2013], window);
+  assert.match(query, /y2026: contributionsCollection/);
+  assert.match(query, /y2013: contributionsCollection/);
+  assert.match(query, /rolling: contributionsCollection/);
+  assert.match(query, /2025-08-17T00:00:00Z/);
+  assert.match(query, /2026-08-17T23:59:59Z/);
+});
+
+test("parses contribution years and sums exact contribution-calendar totals", () => {
+  const years = parseContributionYears({
+    user: {
+      contributionsCollection: { contributionYears: [2026, 2025, 2024] },
+    },
+  });
+  assert.deepEqual(years, [2026, 2025, 2024]);
+
+  const totals = parseContributionTotals(
+    {
+      user: {
+        y2026: { contributionCalendar: { totalContributions: 6489 } },
+        y2025: { contributionCalendar: { totalContributions: 24 } },
+        y2024: { contributionCalendar: { totalContributions: 145 } },
+        rolling: { contributionCalendar: { totalContributions: 6494 } },
+      },
+    },
+    years,
+    contributionWindow("2026-08-17"),
+  );
+  assert.deepEqual(totals, {
+    allTime: 6658,
+    rollingYear: 6494,
+    from: "2025-08-17",
+    to: "2026-08-17",
+  });
+});
+
+test("rejects incomplete or semantically impossible aggregates", () => {
   assert.throws(
     () => parsePublicCommits({ total_count: 10, incomplete_results: true }),
     /incomplete/,
@@ -71,7 +144,33 @@ test("rejects incomplete or impossible aggregates", () => {
     () =>
       buildActivityData(
         {
-          totalCommits: 10,
+          allTime: 20,
+          rollingYear: 21,
+          from: "2025-08-17",
+          to: "2026-08-17",
+        },
+        {
+          commits: 10,
+          pullRequests: 1,
+          issues: 1,
+          rank: "B",
+          percentile: 50,
+        },
+        5,
+      ),
+    /cannot exceed/,
+  );
+  assert.throws(
+    () =>
+      buildActivityData(
+        {
+          allTime: 20,
+          rollingYear: 10,
+          from: "2025-08-17",
+          to: "2026-08-17",
+        },
+        {
+          commits: 10,
           pullRequests: 1,
           issues: 1,
           rank: "B",
@@ -79,20 +178,35 @@ test("rejects incomplete or impossible aggregates", () => {
         },
         11,
       ),
-    /cannot exceed/,
+    /Public commits cannot exceed/,
   );
 });
 
-test("committed public data is allowlisted and privacy-safe", async () => {
+test("committed public data uses only the nested allowlist", async () => {
   const data = validateActivityData(
     JSON.parse(await readFile(DATA_PATH, "utf8")),
   );
   assert.deepEqual(Object.keys(data), TOP_LEVEL_KEYS);
+  assert.deepEqual(Object.keys(data.contributions), CONTRIBUTION_KEYS);
+  assert.deepEqual(Object.keys(data.searchAggregates), SEARCH_AGGREGATE_KEYS);
+  assert.deepEqual(Object.keys(data.rankHeuristic), RANK_KEYS);
+  assert.deepEqual(Object.keys(data.sources), SOURCE_KEYS);
+  assert.ok(data.contributions.allTime >= data.contributions.rollingYear);
+  assert.ok(
+    data.searchAggregates.privateInclusiveCommits >=
+      data.searchAggregates.publicCommits,
+  );
   const serialized = JSON.stringify(data);
   assert.doesNotMatch(
     serialized,
     /repo(?:sitory)?[_ -]?name|customer|client|commit[_ -]?message|email/i,
   );
+});
+
+test("README explains that contributions, commit search and rank are separate", async () => {
+  const readme = await readFile(resolve(ROOT, "README.md"), "utf8");
+  assert.match(readme, /Contributions and commit-search totals are different units/i);
+  assert.match(readme, /not an official GitHub score/i);
 });
 
 test("hero keeps the approved animation and a real static fallback", async () => {
@@ -134,16 +248,30 @@ test("renderer uses the pinned regular and bold Isla font instances", async () =
 });
 
 for (const [name, variant] of Object.entries(VARIANTS)) {
-  test(`${name} output contains current aggregates and the canonical raster logo`, async () => {
+  test(`${name} output contains both metric systems and the canonical raster logo`, async () => {
     const data = JSON.parse(await readFile(DATA_PATH, "utf8"));
     const svg = await readFile(resolve(ASSET_DIR, `${name}.svg`), "utf8");
     assert.doesNotMatch(svg, /\{\{|logo-true-north-sticker/);
-    assert.doesNotMatch(svg, /stroke-width="(?:30|34|513|596)"/);
-    assert.match(svg, new RegExp(`id="rank"[^>]*>${data.rank}<`));
+    assert.match(
+      svg,
+      new RegExp(`id="rank"[^>]*>${data.rankHeuristic.rank}<`),
+    );
     assert.match(
       svg,
       new RegExp(
-        `id="outside-public-commits"[^>]*>${data.outsidePublicCommits.toLocaleString("en-US")}<`,
+        `id="all-time-contributions"[^>]*>${data.contributions.allTime.toLocaleString("en-US")}<`,
+      ),
+    );
+    assert.match(
+      svg,
+      new RegExp(
+        `id="rolling-contributions"[^>]*>${data.contributions.rollingYear.toLocaleString("en-US")}<`,
+      ),
+    );
+    assert.match(
+      svg,
+      new RegExp(
+        `id="private-inclusive-commits"[^>]*>${data.searchAggregates.privateInclusiveCommits.toLocaleString("en-US")}<`,
       ),
     );
 

@@ -1,16 +1,25 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "username": "s-a-s-k-i-a",
-  "publicCommits": 196,
-  "totalCommits": 3867,
-  "outsidePublicCommits": 3671,
-  "outsidePublicPercent": 95,
-  "pullRequests": 982,
-  "issues": 1875,
-  "rank": "A-",
-  "percentile": 35.3,
+  "contributions": {
+    "allTime": 6909,
+    "rollingYear": 6495,
+    "from": "2025-08-17",
+    "to": "2026-08-17"
+  },
+  "searchAggregates": {
+    "publicCommits": 196,
+    "privateInclusiveCommits": 3885,
+    "privateInclusivePullRequests": 991,
+    "privateInclusiveIssues": 1877
+  },
+  "rankHeuristic": {
+    "rank": "A-",
+    "percentile": 35.3
+  },
   "sources": {
-    "public": "GitHub public commit search",
-    "privateInclusive": "GitHub Readme Stats heuristic"
+    "contributions": "GitHub contribution calendars",
+    "publicCommitSearch": "GitHub public commit search",
+    "privateInclusiveSearch": "GitHub Readme Stats heuristic"
   }
 }
