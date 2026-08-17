@@ -61,7 +61,7 @@
     <text id="all-time-contributions" x="76" y="226" font-size="64" font-weight="700" letter-spacing="-2" fill="#2E2766">6,909</text>
 
     <text x="422" y="160" font-size="13" font-weight="700" letter-spacing="1.5" fill="#584D97">LAST 12 MONTHS</text>
-    <text id="rolling-contributions" x="420" y="202" font-size="34" font-weight="700" letter-spacing="-0.5" fill="#2E2766">6,494</text>
+    <text id="rolling-contributions" x="420" y="202" font-size="34" font-weight="700" letter-spacing="-0.5" fill="#2E2766">6,495</text>
     <text x="422" y="226" font-size="13" font-weight="600" letter-spacing="0.9" fill="#6B6191"><tspan id="rolling-percent">94</tspan>% OF ALL-TIME</text>
 
     <rect x="84" y="246" width="540" height="44" rx="22" fill="#E8E1F1" stroke="#322a6f" stroke-opacity="0.14" stroke-width="1.5"></rect>
