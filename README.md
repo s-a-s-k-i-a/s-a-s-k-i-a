@@ -1,148 +1,160 @@
 <div align="center">
 
-<a href="https://isla-stud.io" title="isla-stud.io — Saskia Teichmann, Web Studio">
+<a href="https://isla-stud.io/" title="Saskia Teichmann · Isla Studio">
   <picture>
     <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/profile/guided-commit-tunnel-static.png" />
-    <img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/profile/guided-commit-tunnel.gif" alt="Ein leuchtendes True-North-Zeichen führt einen Impuls durch einen offenen Systemtunnel von der Eingabe über Architektur und Prüfung bis zum Ergebnis." width="100%" />
+    <img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/profile/guided-commit-tunnel.gif" alt="A glowing True North mark guides a signal through an open system tunnel from decision to architecture, verification and outcome." width="100%" />
   </picture>
 </a>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Google+Sans&weight=600&size=19&duration=3200&pause=900&color=EF6E6E&center=true&vCenter=true&multiline=false&repeat=true&width=760&height=44&lines=WordPress+%26+WooCommerce+f%C3%BCr+Industrie+%26+Mittelstand;WordPress+%26+WooCommerce+for+industrial-scale+clients;Inhaberin+von+citelayer%C2%AE+%E2%80%94+AI+Visibility;I+ship+WP+plugins%2C+EDD+products+%26+AI+agent+tooling;Sauber+bauen.+Belegen.+Solide%2C+nicht+laut.)](https://github.com/s-a-s-k-i-a)
+# Saskia Teichmann
 
-<br/>
+**Technology strategy · Systems architecture · Full-stack engineering**
 
-[![Studio](https://img.shields.io/badge/isla--stud.io-Web%20Studio-ef6e6e?style=for-the-badge&logo=wordpress&logoColor=white)](https://isla-stud.io)
-[![citelayer](https://img.shields.io/badge/citelayer%C2%AE-AI%20Visibility-6750A4?style=for-the-badge&logoColor=white)](https://citelayer-ai.com)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Saskia%20Teichmann-0A66C2?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0yMC40NDcgMjAuNDUyaC0zLjU1NHYtNS41NjljMC0xLjMyOC0uMDI3LTMuMDM3LTEuODUyLTMuMDM3LTEuODUzIDAtMi4xMzYgMS40NDUtMi4xMzYgMi45Mzl2NS42NjdIOS4zNTFWOWgzLjQxNHYxLjU2MWguMDQ2Yy40NzctLjkgMS42MzctMS44NSAzLjM3LTEuODUgMy42MDEgMCA0LjI2NyAyLjM3IDQuMjY3IDUuNDU1djYuMjg2ek01LjMzNyA3LjQzM2MtMS4xNDQgMC0yLjA2My0uOTI2LTIuMDYzLTIuMDY1IDAtMS4xMzguOTItMi4wNjMgMi4wNjMtMi4wNjMgMS4xNCAwIDIuMDY0LjkyNSAyLjA2NCAyLjA2MyAwIDEuMTM5LS45MjUgMi4wNjUtMi4wNjQgMi4wNjV6bTEuNzgyIDEzLjAxOUgzLjU1NVY5aDMuNTY0djExLjQ1MnpNMjIuMjI1IDBIMS43NzFDLjc5MiAwIDAgLjc3NCAwIDEuNzI5djIwLjU0MkMwIDIzLjIyNy43OTIgMjQgMS43NzEgMjRoMjAuNDUxQzIzLjIgMjQgMjQgMjMuMjI3IDI0IDIyLjI3MVYxLjcyOUMyNCAuNzc0IDIzLjIgMCAyMi4yMjIgMHoiLz48L3N2Zz4=)](https://www.linkedin.com/in/saskia-teichmann-2b140410b/)
-![Made in Germany](https://img.shields.io/badge/Made%20in-Germany%20%F0%9F%87%A9%F0%9F%87%AA-2c292e?style=for-the-badge)
+For business-critical commerce, digital platforms and production AI.<br/>
+**From decision to code.**
+
+**WooCommerce Core Contributor · WordOps Contributor · Hermes Agent Contributor**
+
+<p>
+  <a href="https://isla-stud.io/#gespraech"><strong>Discuss a project</strong></a>&nbsp; · &nbsp;
+  <a href="https://isla-stud.io/projekte/">Projects &amp; systems</a>&nbsp; · &nbsp;
+  <a href="https://isla-stud.io/blog/">Insights</a>&nbsp; · &nbsp;
+  <a href="https://www.linkedin.com/in/saskia-teichmann-2b140410b/">LinkedIn</a>
+</p>
+
+<sub>Deutschsprachige Beratung für DACH-Teams → <a href="https://isla-stud.io/beratung/">isla-stud.io/beratung</a></sub>
 
 </div>
 
 ---
 
-<a href="https://isla-stud.io"><img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/h-whoami.svg" alt="whoami" /></a>
+## `whoami`
 
 ```console
 $ whoami
-saskia — full-stack web developer
+saskia
+↳ technology advisory + full-stack engineering
 
-$ id saskia
-uid=2013(saskia) groups=wordpress,woocommerce,edd,plugin-dev,ai-visibility,citelayer,devops
+$ ./trace
+decision → system → code
 
-$ curl -s ipapi.co/city
-somewhere with good wifi and better light 🌴 — laptop first, office never
+$ ./focus
+commerce · platforms · production AI
+WordPress/WooCommerce: depth, not boundary
 
-$ echo $CORE_MARKET
-DACH 🇩🇪 — vornehmlich Deutschland
+$ ./verify
+inspect · reproduce · prove · fix the cause
 ```
 
-**Full-Stack-Webentwicklerin** und Spezialistin für **WordPress & WooCommerce** — für Mittelstand, Großunternehmen und industrielle Kundschaft. Inhaberin von **citelayer®**: Marken für KI sichtbar und zitierbar machen. Ich baue produktive WordPress-Themes & -Plugins, **Easy-Digital-Downloads**-Shops mit Lizenzierung & Auto-Updates und **KI-Agenten-Tooling** (Claude-Code-Plugins & -Skills, MCP, agent-ready Docs) — auf selbst gehostetem CloudPanel / Nginx / Varnish-Stack.
+I advise leadership teams when technology decisions are expensive, slow or difficult to reverse: platform choices, modernization, production AI, tangled legacy systems, or vendor claims that need evidence.
 
-<sub><b>EN</b> — Full-stack web developer & WordPress / WooCommerce specialist for mid-size, large, and industrial clients. Founder of citelayer®, making brands visible and citable to AI. I ship production WP themes & plugins, EDD shops with licensing & auto-updaters, and AI-agent tooling on a self-hosted stack.</sub>
+My recommendations do not end at a slide deck. If a claim needs testing, I follow it into architecture, data flows, integrations, deployment, operations and code.
 
-> **Erst lesen, dann schreiben. Quelle nennen. Ursache statt Symptom. Solide, nicht laut.**
+I have built and operated production websites, commerce systems and applications since 2009. Implementation is available, but it is never a prerequisite for an independent recommendation.
 
-```text
-WordPress · WooCommerce    ████████████████████  custom themes · plugins · industrial-scale sites
-Commerce · EDD             ████████████████░░░░  Easy Digital Downloads · licensing · auto-updaters
-AI Visibility · citelayer® ███████████████░░░░░  founder · making brands citable to AI
-AI Agent Tooling           ██████████████░░░░░░  Claude Code plugins & skills · MCP · agent-ready docs
-DevOps · Hosting           ████████████░░░░░░░░  CloudPanel · Nginx · Varnish · WP-CLI · DKIM/SPF/DMARC
-```
+> **Decision before technology. Evidence before claims. Causes before symptoms.**
 
 ---
 
-<a href="https://github.com/s-a-s-k-i-a?tab=repositories"><img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/h-featured.svg" alt="Featured Work · Projekte" /></a>
+## What I am brought in for
 
-| Project | What it does | Stars | Lang |
-|---------|--------------|:-----:|:----:|
-| [**ki-engineering-werkstatt**](https://github.com/s-a-s-k-i-a/ki-engineering-werkstatt) | 20 Phasen KI-Engineering auf Deutsch — von Tokenizer bis EU AI Act. Marimo-Notebooks, MIT. Work in progress — eins meiner offenen Experimente | ![Stars](https://img.shields.io/github/stars/s-a-s-k-i-a/ki-engineering-werkstatt?style=flat-square&color=ef6e6e&label=%E2%98%85&cacheSeconds=86400) | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) |
-| [**cloudpanel-mail-addon**](https://github.com/s-a-s-k-i-a/cloudpanel-mail-addon) | DKIM, SPF & DMARC management addon for CloudPanel v2 — adds a Mail tab to every site | ![Stars](https://img.shields.io/github/stars/s-a-s-k-i-a/cloudpanel-mail-addon?style=flat-square&color=ef6e6e&label=%E2%98%85&cacheSeconds=86400) | ![Shell](https://img.shields.io/badge/Shell-4EAA25?style=flat-square&logo=gnu-bash&logoColor=white) |
-| [**claude-code-timestamps**](https://github.com/s-a-s-k-i-a/claude-code-timestamps) | Claude Code plugin: display timestamps for chat messages | ![Stars](https://img.shields.io/github/stars/s-a-s-k-i-a/claude-code-timestamps?style=flat-square&color=ef6e6e&label=%E2%98%85&cacheSeconds=86400) | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) |
-| [**design-md-skill**](https://github.com/s-a-s-k-i-a/design-md-skill) | Claude Code skill: auto-generate a spec-conformant DESIGN.md from your existing design tokens | ![Stars](https://img.shields.io/github/stars/s-a-s-k-i-a/design-md-skill?style=flat-square&color=ef6e6e&label=%E2%98%85&cacheSeconds=86400) | ![Markdown](https://img.shields.io/badge/Skill-CC785C?style=flat-square&logo=anthropic&logoColor=white) |
-| [**edd-sl-sdk-guide**](https://github.com/s-a-s-k-i-a/edd-sl-sdk-guide) | Drop-in guide for the EDD Software Licensing SDK — license + auto-updater in minutes, AI-agent friendly | ![Stars](https://img.shields.io/github/stars/s-a-s-k-i-a/edd-sl-sdk-guide?style=flat-square&color=ef6e6e&label=%E2%98%85&cacheSeconds=86400) | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white) |
+**01 · Clarify the decision**<br/>
+When a platform, modernization, vendor or AI decision could become costly to reverse.
 
-> 🧠 **In Arbeit: „agents-brain"** — mein Multi-Agenten-Team (Orchestrator, Content, Research, QA) lebt mit Identität & Gedächtnis als **Markdown in Git**, tool- und harness-unabhängig. Der Werkstattbericht dazu erscheint als Blog-Serie auf [isla-stud.io](https://isla-stud.io) — echte Dateien, echte Timestamps, echte Fehler. _· My agent team's identity & memory live as markdown in git, tool-agnostic. Workshop-report series coming soon (in German)._
+**02 · Establish system reality**<br/>
+When leadership, agencies and engineering teams hold different pictures of risk, dependencies, data flows or downstream cost.
+
+**03 · Build a route to delivery**<br/>
+When the decision needs to become a sound architecture, a practical roadmap or working software — without a reflexive tool or platform migration.
+
+[Advisory formats](https://isla-stud.io/beratung/) ·
+[E-commerce system review](https://isla-stud.io/beratung/e-commerce-system-review/)
+
+---
+
+## Evidence from real systems
+
+### Merged upstream work
+
+- **WooCommerce Core — merged.** [PR #65607](https://github.com/woocommerce/woocommerce/pull/65607) prevents unsaved order items from being silently overwritten during remove-and-readd cycles.
+- **WordOps — merged.** [PR #724](https://github.com/WordOps/WordOps/pull/724) hardens download error handling when a network exception has no reason; [PR #777](https://github.com/WordOps/WordOps/pull/777) serves missing CSS and JavaScript files with the correct MIME type.
+- **html2canvas-pro — merged and released.** [PR #213](https://github.com/yorickshan/html2canvas-pro/pull/213) keeps text-range offsets aligned after `text-transform`; the maintainer confirmed the fix in v2.0.4.
+
+### Active upstream work
+
+- **WordPress Core — patch in review.** [PR #11610](https://github.com/WordPress/wordpress-develop/pull/11610), attached to [Trac #42281](https://core.trac.wordpress.org/ticket/42281), makes translation updates individually selectable and deferrable. Human reviewer feedback is incorporated and focused regression coverage is included; the patch remains open.
+- **Hermes Agent — open review.** [PR #70226](https://github.com/NousResearch/hermes-agent/pull/70226) preserves the reason for a denied action across the approval boundary. The upstream review confirmed the underlying propagation bug and the fix was rebased to current `main`.
+
+### Upstream diagnostics
+
+- **Divi 5 — two fixed reports, one active audit.** [#317](https://github.com/elegantthemes/Divi-Beta/issues/317) and [#329](https://github.com/elegantthemes/Divi-Beta/issues/329) are closed as fixed. [#332](https://github.com/elegantthemes/Divi-Beta/issues/332) remains open with controlled version-to-version reproductions, clean-install evidence and source-level patch proposals for the remaining CSS-generation regressions.
+
+### Systems I build and operate
+
+**Production platforms**<br/>
+Business-critical systems across commerce, content, ticketing and operations — including architecture, integrations, custom engineering and technical ownership. [Read the project reports](https://isla-stud.io/projekte/).
+
+**Products and independent systems**<br/>
+citelayer®, Funnelboard, WP2Amparex and FeedbackPilot are examples of product development and ongoing operations. They are evidence of the work, not the whole identity. [Explore plugins and downloads](https://isla-stud.io/downloads/).
+
+**Open engineering**<br/>
+Selected repositories where the reasoning, implementation and documentation are directly inspectable:
+
+- [**cloudpanel-mail-addon**](https://github.com/s-a-s-k-i-a/cloudpanel-mail-addon) — make DKIM, SPF and DMARC manageable where the server is actually operated.
+- [**hermes-kimi-code**](https://github.com/s-a-s-k-i-a/hermes-kimi-code) — bounded, fail-closed delegation for a production agent workflow.
+- [**design-md-skill**](https://github.com/s-a-s-k-i-a/design-md-skill) — turn existing design tokens into a dependable, agent-readable contract.
+- [**tax-proof-coupons**](https://github.com/s-a-s-k-i-a/tax-proof-coupons) — preserve correct WooCommerce voucher logic across changing tax rates.
+- [**edd-sl-sdk-guide**](https://github.com/s-a-s-k-i-a/edd-sl-sdk-guide) — make licensing and automatic updates understandable to humans and coding agents.
+- [**claude-code-timestamps**](https://github.com/s-a-s-k-i-a/claude-code-timestamps) — a small tool with one clear purpose; useful details are allowed to be delightful.
 
 <details>
-<summary><b>More public projects</b></summary>
+<summary><strong>More open workshop pieces</strong></summary>
 <br/>
 
-| Project | What it does | Lang |
-|---------|--------------|:----:|
-| [**betterplace-donation-embed**](https://github.com/s-a-s-k-i-a/betterplace-donation-embed) | Embed betterplace.org donation forms in WordPress — Gutenberg block, shortcode, auto-updates | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white) |
-| [**localized-sitemap-indexes**](https://github.com/s-a-s-k-i-a/localized-sitemap-indexes) | Language-specific XML sitemap indexes for TranslatePress sites using Rank Math SEO | ![PHP](https://img.shields.io/badge/PHP-777BB4?style=flat-square&logo=php&logoColor=white) |
+- [ki-engineering-werkstatt](https://github.com/s-a-s-k-i-a/ki-engineering-werkstatt) — an open learning and experimentation track, explicitly work in progress.
+- [betterplace-donation-embed](https://github.com/s-a-s-k-i-a/betterplace-donation-embed) — donation forms as a Gutenberg block and shortcode, with an update path.
+- [localized-sitemap-indexes](https://github.com/s-a-s-k-i-a/localized-sitemap-indexes) — language-specific sitemap indexes for TranslatePress and Rank Math.
 
 </details>
 
-> 📦 Der Großteil meiner Arbeit liegt in **privaten Kund:innen- & Produkt-Repos** (48+) — der Contribution-Graph unten zeigt diese Aktivität **anonym**: keine Repo-Namen, kein Code. _· Most of my work is private; the graph below reflects it anonymously._
+---
+
+## How I work
+
+**Start with the business question** — technology explains the decision, risk and downstream cost; it is not the point of the exercise.
+
+**Verify independently** — I do not recommend a platform because it is familiar, easy to sell or currently loud.
+
+**Go as deep as the decision requires** — from a leadership conversation to an API response, log, deployment or code path.
+
+**Design for operations** — data control, approval boundaries, maintainability and ownership belong in the architecture.
+
+From the working bench: [Isla Insights](https://isla-stud.io/blog/) · [Agents Brain series](https://isla-stud.io/tag/agents-brain/)
 
 ---
 
-<a href="https://isla-stud.io"><img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/h-products.svg" alt="Products · Produkte" /></a>
-
-Kostenlose Plugins auf **WordPress.org**, kommerzielle Tools über meinen **EDD-Shop** ([isla-stud.io](https://isla-stud.io)) und **citelayer®** mit Pro-Add-ons auf **[citelayer.ai](https://citelayer.ai)** — alle mit Lizenzierung & Auto-Updates.<br/>
-<sub><b>EN</b> — Free plugins on WordPress.org, commercial tools via my EDD shop, and citelayer® with Pro add-ons on citelayer.ai — all with licensing & auto-updates.</sub>
-
-<a href="https://citelayer-ai.com" title="citelayer® — AI Visibility"><img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/citelayer-hero.svg" alt="citelayer® — AI Visibility · Get Found by AI · llms.txt, Bot Analytics, Schema.org" width="100%" /></a>
-
-[![citelayer · Free core on WordPress.org](https://img.shields.io/badge/WordPress.org-Free%20Core-6750A4?style=for-the-badge&logo=wordpress&logoColor=white)](https://wordpress.org/plugins/citelayer/)
-[![citelayer.ai · Pro add-ons](https://img.shields.io/badge/citelayer.ai-Pro%20Add--ons-E19054?style=for-the-badge&logoColor=white)](https://citelayer.ai)
-
-### EDD-Shop · weitere Plugins · more plugins
-
-| Produkt | Was es macht · what it does | |
-|---------|------------------------------|:--:|
-| [**FeedbackPilot**](https://isla-stud.io/downloads/feedbackpilot/) | Bug-Reports von Besucher:innen als GitHub-Issue — mit Screenshot, Browser- & Server-Kontext | ![Free](https://img.shields.io/badge/Free-d4a847?style=flat-square) |
-| [**WP2Amparex**](https://isla-stud.io/downloads/wp2amparex/) | Terminbuchung für WordPress mit **Amparex**-Anbindung — Kund:innen buchen online | ![Paid](https://img.shields.io/badge/Paid-ef6e6e?style=flat-square) |
-| [**EDD Docs Gateway**](https://isla-stud.io/downloads/edd-docs-gateway/) | Geschützte Produktdoku für EDD: GitHub-Wikis syncen & nur lizenzierten Kund:innen ausspielen | ![Paid](https://img.shields.io/badge/Paid-ef6e6e?style=flat-square) |
-| [**Betterplace Spendenformular**](https://isla-stud.io/downloads/betterplace-donation-formular-fuer-wordpress/) | betterplace.org-Spendenformulare in WordPress — Gutenberg-Block, Shortcode, Auto-Updates | ![Free](https://img.shields.io/badge/Free-d4a847?style=flat-square) |
-
----
-
-<a href="https://isla-stud.io"><img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/h-stack.svg" alt="Stack" /></a>
-
-<a href="https://isla-stud.io" title="isla-stud.io"><img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/stack-card.svg" alt="Stack — Languages: PHP, JavaScript, TypeScript, Python, CSS, HTML, Shell. WordPress: WordPress, WooCommerce, EDD, ACF Pro, WP-CLI, Composer. Infrastructure: Linux, Nginx, Varnish, MariaDB, CloudPanel, Git. AI & Agents: Claude, Claude Code, MCP." width="100%" /></a>
-
----
-
-<a href="https://github.com/s-a-s-k-i-a"><img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/h-activity.svg" alt="Activity · Aktivität" /></a>
-
-<div align="center">
-
-<sub><b>Contributions — public &amp; anonymized private</b> · seit Aktivierung von „Private contributions" zählt auch meine private Arbeit mit (anonym, kein Code).</sub>
-
-<br/><br/>
-
-<a href="https://github.com/s-a-s-k-i-a"><img height="172" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=s-a-s-k-i-a&theme=2077" /></a>
-
+<details>
+<summary><strong>And the commit snake?</strong></summary>
 <br/>
 
-<a href="https://github.com/s-a-s-k-i-a"><img src="https://github-readme-activity-graph.vercel.app/graph?username=s-a-s-k-i-a&theme=react-dark&bg_color=17120f&color=ef6e6e&line=d4a847&point=ffffff&area=true&area_color=ef6e6e&hide_border=true" alt="activity graph" /></a>
+It stays. As an Easter egg — not as a competence score.
 
-<br/><br/>
-
-<a href="https://github.com/s-a-s-k-i-a"><img height="172" src="https://github-readme-stats-mu-drab-12.vercel.app/api?username=s-a-s-k-i-a&show_icons=true&include_all_commits=true&hide_border=true&title_color=ef6e6e&icon_color=d4a847&text_color=2c292e&bg_color=f5f0eb" /></a>
-<a href="https://github.com/s-a-s-k-i-a"><img height="172" src="https://streak-stats.demolab.com/?user=s-a-s-k-i-a&hide_border=true&background=f5f0eb&ring=ef6e6e&fire=ef6e6e&currStreakLabel=ef6e6e&sideLabels=2c292e&dates=9a8f86&currStreakNum=2c292e&sideNums=2c292e&dayLabels=2c292e&stroke=d4a847" /></a>
-
-<br/><br/>
-
-<a href="https://github.com/s-a-s-k-i-a"><img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/output/github-snake-dark.svg" alt="contribution snake" /></a>
-
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/output/github-snake-dark.svg" />
+    <img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/output/github-snake.svg" alt="An animated snake moves through Saskia's GitHub contribution grid." width="100%" />
+  </picture>
 </div>
+
+</details>
 
 ---
 
-<div align="center">
+## When the decision has to hold
 
-<a href="https://isla-stud.io"><img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/h-reach.svg" alt="Reach me · Kontakt" /></a>
+If a system is business-critical and the wrong decision would be expensive to unwind, an independent technical assessment should happen before implementation.
 
-[![Website](https://img.shields.io/badge/isla--stud.io-ef6e6e?style=for-the-badge&logo=wordpress&logoColor=white)](https://isla-stud.io)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0yMC40NDcgMjAuNDUyaC0zLjU1NHYtNS41NjljMC0xLjMyOC0uMDI3LTMuMDM3LTEuODUyLTMuMDM3LTEuODUzIDAtMi4xMzYgMS40NDUtMi4xMzYgMi45Mzl2NS42NjdIOS4zNTFWOWgzLjQxNHYxLjU2MWguMDQ2Yy40NzctLjkgMS42MzctMS44NSAzLjM3LTEuODUgMy42MDEgMCA0LjI2NyAyLjM3IDQuMjY3IDUuNDU1djYuMjg2ek01LjMzNyA3LjQzM2MtMS4xNDQgMC0yLjA2My0uOTI2LTIuMDYzLTIuMDY1IDAtMS4xMzguOTItMi4wNjMgMi4wNjMtMi4wNjMgMS4xNCAwIDIuMDY0LjkyNSAyLjA2NCAyLjA2MyAwIDEuMTM5LS45MjUgMi4wNjUtMi4wNjQgMi4wNjV6bTEuNzgyIDEzLjAxOUgzLjU1NVY5aDMuNTY0djExLjQ1MnpNMjIuMjI1IDBIMS43NzFDLjc5MiAwIDAgLjc3NCAwIDEuNzI5djIwLjU0MkMwIDIzLjIyNy43OTIgMjQgMS43NzEgMjRoMjAuNDUxQzIzLjIgMjQgMjQgMjMuMjI3IDI0IDIyLjI3MVYxLjcyOUMyNCAuNzc0IDIzLjIgMCAyMi4yMjIgMHoiLz48L3N2Zz4=)](https://www.linkedin.com/in/saskia-teichmann-2b140410b/)
-[![GitHub](https://img.shields.io/badge/GitHub-2c292e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/s-a-s-k-i-a)
+**[Discuss a project](https://isla-stud.io/#gespraech)** · [isla-stud.io](https://isla-stud.io/) · [LinkedIn](https://www.linkedin.com/in/saskia-teichmann-2b140410b/)
 
-<sub>WordPress since the 2010s · on GitHub since 2013 · building citelayer® today</sub>
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:d4a847,50:e8735a,100:ef6e6e&height=110&section=footer" alt="" />
-
-</div>
+<sub>Full-stack engineering since 2009 · WordPress and WooCommerce: depth, not boundary.</sub>
