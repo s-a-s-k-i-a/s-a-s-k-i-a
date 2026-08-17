@@ -1,0 +1,73 @@
+name: Refresh activity trace
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/activity-trace.yml"
+      - "assets/profile/activity-trace/**"
+      - "package-lock.json"
+      - "package.json"
+      - "scripts/activity-trace*"
+  schedule:
+    - cron: "17 */12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: activity-trace
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out profile repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install renderer dependencies
+        run: npm ci
+
+      - name: Render committed aggregate data
+        if: github.event_name == 'pull_request'
+        run: npm run activity:build
+
+      - name: Refresh aggregate data and render assets
+        if: github.event_name != 'pull_request'
+        run: npm run activity:refresh
+
+      - name: Verify schema, privacy boundary and image outputs
+        run: npm test
+
+      - name: Check generated diff
+        run: git diff --check
+
+      - name: Verify committed assets are reproducible
+        if: github.event_name == 'pull_request'
+        run: git diff --exit-code -- assets/profile/activity-trace
+
+      - name: Commit changed aggregate assets
+        if: github.event_name != 'pull_request'
+        run: |
+          if git diff --quiet -- assets/profile/activity-trace; then
+            echo "Activity Trace is already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            assets/profile/activity-trace/data.json \
+            assets/profile/activity-trace/desktop.svg \
+            assets/profile/activity-trace/desktop.png \
+            assets/profile/activity-trace/mobile.svg \
+            assets/profile/activity-trace/mobile.png
+          git commit -m "chore(profile): refresh activity trace [skip ci]"
+          git push

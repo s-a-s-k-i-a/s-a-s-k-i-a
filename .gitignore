@@ -4,4 +4,6 @@ tools/
 
 # Local render/preview artifacts
 *.png
+!assets/profile/activity-trace/*.png
+node_modules/
 .DS_Store

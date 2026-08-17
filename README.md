@@ -2,8 +2,8 @@
 
 <a href="https://isla-stud.io/" title="Saskia Teichmann · Isla Studio">
   <picture>
-    <source media="(prefers-reduced-motion: reduce)" srcset="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/profile/guided-commit-tunnel-static.png" />
-    <img src="https://raw.githubusercontent.com/s-a-s-k-i-a/s-a-s-k-i-a/main/assets/profile/guided-commit-tunnel.gif" alt="A glowing True North mark guides a signal through an open system tunnel from decision to architecture, verification and outcome." width="100%" />
+    <source media="(prefers-reduced-motion: no-preference)" type="image/gif" srcset="./assets/profile/guided-commit-tunnel.gif?v=2" />
+    <img src="./assets/profile/guided-commit-tunnel-static.png?v=2" alt="A glowing True North mark guides a signal through an open system tunnel from decision to architecture, verification and outcome." width="100%" />
   </picture>
 </a>
 
@@ -117,6 +117,21 @@ Selected repositories where the reasoning, implementation and documentation are 
 - [localized-sitemap-indexes](https://github.com/s-a-s-k-i-a/localized-sitemap-indexes) — language-specific sitemap indexes for TranslatePress and Rank Math.
 
 </details>
+
+---
+
+## Activity trace
+
+<div align="center">
+  <a href="./docs/activity-trace.md" title="How the Activity Trace is calculated">
+    <picture>
+      <source media="(max-width: 600px)" srcset="./assets/profile/activity-trace/mobile.png" />
+      <img src="./assets/profile/activity-trace/desktop.png" alt="A tactile lavender Activity Trace compares public commits with the larger private-inclusive total, merges both streams into an explicitly heuristic activity rank, and lists aggregate commits, pull requests and issues." width="100%" />
+    </picture>
+  </a>
+</div>
+
+<sub>Refreshed from public GitHub search and a private-inclusive aggregate source. Only counts and ratios are published; repository names, clients, code and commit text stay private. The rank is a GitHub Readme Stats heuristic, not an official GitHub score. <a href="./docs/activity-trace.md">Method and privacy boundary</a>.</sub>
 
 ---
 

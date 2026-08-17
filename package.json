@@ -1,0 +1,16 @@
+{
+  "name": "saskia-github-profile",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "activity:build": "node scripts/activity-trace.mjs build",
+    "activity:refresh": "node scripts/activity-trace.mjs refresh",
+    "test": "node --test scripts/activity-trace.test.mjs"
+  },
+  "dependencies": {
+    "@resvg/resvg-js": "2.6.2"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

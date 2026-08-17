@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="680" viewBox="0 0 720 680" role="img" aria-labelledby="atm-title atm-desc">
+<title id="atm-title">Activity Trace — private-inclusive GitHub aggregates</title>
+<desc id="atm-desc">Mobile composition: a short public commit bar above a much larger bar outside public view; both signals merge and flow down to an A- activity rank seal.</desc>
+<defs>
+  <linearGradient id="g-bg" x1="0" y1="0" x2="0.2" y2="1">
+    <stop offset="0" stop-color="#E7E0F3"></stop><stop offset="1" stop-color="#DED5EE"></stop>
+  </linearGradient>
+  <linearGradient id="g-floor" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#E7DECA"></stop><stop offset="0.22" stop-color="#F3EDDD"></stop><stop offset="0.55" stop-color="#FAF6EB"></stop><stop offset="1" stop-color="#FDFBF3"></stop>
+  </linearGradient>
+  <linearGradient id="g-inshadow" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#463478" stop-opacity="0.22"></stop><stop offset="1" stop-color="#463478" stop-opacity="0"></stop>
+  </linearGradient>
+  <linearGradient id="g-coral" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#F6AE95"></stop><stop offset="1" stop-color="#EF9078"></stop>
+  </linearGradient>
+  <linearGradient id="g-stream" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#A9DABF"></stop><stop offset="1" stop-color="#C2AFE9"></stop>
+  </linearGradient>
+  <radialGradient id="g-seal" cx="0.5" cy="0.42" r="0.75">
+    <stop offset="0" stop-color="#F6F1FD"></stop><stop offset="1" stop-color="#E5DAF6"></stop>
+  </radialGradient>
+  <filter id="f-grain" x="0" y="0" width="100%" height="100%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" stitchTiles="stitch" result="n"></feTurbulence>
+    <feColorMatrix in="n" type="matrix" values="0 0 0 0 0.24  0 0 0 0 0.19  0 0 0 0 0.38  0 0 0 0.55 0"></feColorMatrix>
+  </filter>
+  <filter id="f-shadow" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#322a6f" flood-opacity="0.20"></feDropShadow>
+  </filter>
+  <filter id="f-lift" x="-20%" y="-40%" width="140%" height="200%">
+    <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#4a3a80" flood-opacity="0.22"></feDropShadow>
+  </filter>
+  <clipPath id="clip-recess"><rect x="48" y="126" width="624" height="226" rx="42"></rect></clipPath>
+</defs>
+
+<g id="background">
+  <rect x="0" y="0" width="720" height="680" rx="28" fill="url(#g-bg)"></rect>
+  <rect x="1" y="1" width="718" height="678" rx="27" fill="none" stroke="#322a6f" stroke-opacity="0.22" stroke-width="1.5"></rect>
+</g>
+<g id="paper-texture">
+  <rect x="0" y="0" width="720" height="680" rx="28" filter="url(#f-grain)" opacity="0.04"></rect>
+</g>
+
+<g font-family="'Google Sans 18pt',sans-serif">
+
+  <g id="header">
+    <text x="48" y="58" font-size="13" font-weight="700" letter-spacing="2.2" fill="#584D97">ACTIVITY TRACE · PRIVATE-INCLUSIVE AGGREGATES</text>
+    <text x="47" y="96" font-size="28" font-weight="700" letter-spacing="-0.3" fill="#2E2766">The work behind the public graph</text>
+  </g>
+
+  <g id="recess">
+    <rect x="48" y="126" width="624" height="226" rx="42" fill="url(#g-floor)"></rect>
+    <g clip-path="url(#clip-recess)">
+      <rect x="48" y="126" width="624" height="50" fill="url(#g-inshadow)"></rect>
+    </g>
+    <rect x="48" y="126" width="624" height="226" rx="42" fill="none" stroke="#B3A3D3" stroke-width="1.5"></rect>
+    <rect x="46" y="124" width="628" height="230" rx="44" fill="none" stroke="#F3EDFB" stroke-width="1.6" stroke-opacity="0.9"></rect>
+  </g>
+
+
+  <g id="public-layer">
+    <text x="84" y="160" font-size="12.5" font-weight="700" letter-spacing="1.8" fill="#3A2F55">PUBLIC COMMITS · <tspan id="public-commits" font-size="15" letter-spacing="0.4">195</tspan></text>
+    <rect x="84" y="170" width="540" height="20" rx="10" fill="#322a6f" fill-opacity="0.06"></rect>
+    <rect data-role="public-fill" x="84" y="170" width="30" height="20" rx="10" fill="url(#g-coral)" stroke="#322a6f" stroke-width="2" filter="url(#f-lift)"></rect>
+  </g>
+
+
+  <g id="outside-public-layer">
+    <text x="82" y="234" font-weight="700" fill="#2E2766"><tspan id="outside-public-percent" font-size="56">95</tspan><tspan font-size="32" dy="-3">%</tspan></text>
+    <text x="204" y="234" font-size="18" font-weight="700" letter-spacing="2.2" fill="#2E2766">OUTSIDE PUBLIC VIEW</text>
+    <text x="84" y="330" font-size="15" fill="#4A4171"><tspan id="outside-public-commits">3,612</tspan> of <tspan data-dyn="total-commits">3,807</tspan> commits</text>
+    <rect x="84" y="248" width="540" height="50" rx="25" fill="#322a6f" fill-opacity="0.06"></rect>
+    <rect data-role="outside-fill" x="84" y="248" width="513" height="50" rx="25" fill="url(#g-stream)" stroke="#322a6f" stroke-width="2.5" filter="url(#f-lift)"></rect>
+  </g>
+
+
+  <path id="signal-public" d="M 122 180 H 596 C 626 180 646 198 658 216" fill="none" stroke="#322a6f" stroke-width="4" stroke-linecap="round" stroke-dasharray="0.1 12" opacity="0.5"></path>
+  <path id="signal-outside" d="M 150 273 H 594 C 624 273 646 258 658 246" fill="none" stroke="#322a6f" stroke-width="5" stroke-linecap="round" stroke-dasharray="0.1 14" opacity="0.5"></path>
+
+  <g id="merge-point">
+    <circle cx="668" cy="231" r="16" fill="#FFFFFF" stroke="#322a6f" stroke-width="3.5" filter="url(#f-lift)"></circle>
+  </g>
+  <path id="signal-merged" d="M 666 253 C 664 330 560 392 452 432" fill="none" stroke="#322a6f" stroke-width="7" stroke-linecap="round" stroke-dasharray="0.1 14"></path>
+
+  <g id="rank-seal" transform="translate(360,486)">
+    <circle r="100" fill="#FDFDFC" stroke="#322a6f" stroke-width="3" filter="url(#f-shadow)"></circle>
+    <circle r="81" fill="url(#g-seal)"></circle>
+    <circle r="68" fill="none" stroke="#B79BE8" stroke-width="3" stroke-linecap="round" stroke-dasharray="1 11"></circle>
+    <circle cx="70" cy="-70" r="7" fill="#EFC97F" stroke="#322a6f" stroke-width="2.5"></circle>
+    <text y="-40" text-anchor="middle" font-size="14" font-weight="700" letter-spacing="2.4" fill="#2E2766" stroke="#F1EAFB" stroke-width="8" stroke-linejoin="round" paint-order="stroke">ACTIVITY RANK</text>
+    <text id="rank" y="34" text-anchor="middle" font-size="80" font-weight="700" fill="#2E2766">A-</text>
+    <text y="66" text-anchor="middle" font-size="19" font-weight="700" letter-spacing="1.8" fill="#584D97" stroke="#E9DEF7" stroke-width="9" stroke-linejoin="round" paint-order="stroke">TOP <tspan id="percentile">35.3</tspan>%</text>
+  </g>
+
+  <g id="metrics-strip">
+    <rect x="80" y="602" width="560" height="50" rx="25" fill="#FDFDFC" stroke="#322a6f" stroke-width="2.5" filter="url(#f-lift)"></rect>
+    <line x1="266" y1="612" x2="266" y2="642" stroke="#322a6f" stroke-opacity="0.25" stroke-width="1.5"></line>
+    <line x1="453" y1="612" x2="453" y2="642" stroke="#322a6f" stroke-opacity="0.25" stroke-width="1.5"></line>
+    <text x="173" y="622" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="1.8" fill="#584D97">COMMITS</text>
+    <text id="total-commits" x="173" y="643" text-anchor="middle" font-size="17" font-weight="700" fill="#2E2766">3,807</text>
+    <text x="360" y="622" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="1.8" fill="#584D97">PULL REQUESTS</text>
+    <text id="pull-requests" x="360" y="643" text-anchor="middle" font-size="17" font-weight="700" fill="#2E2766">962</text>
+    <text x="546" y="622" text-anchor="middle" font-size="11" font-weight="700" letter-spacing="1.8" fill="#584D97">ISSUES</text>
+    <text id="issues" x="546" y="643" text-anchor="middle" font-size="17" font-weight="700" fill="#2E2766">1,869</text>
+  </g>
+
+  <text x="360" y="671" text-anchor="middle" font-size="10" font-weight="600" letter-spacing="1.4" fill="#6B6191">GITHUB-README-STATS HEURISTIC · AGGREGATES ONLY · NO PRIVATE NAMES OR CODE</text>
+</g>
+
+<g id="true-north">
+  <image data-role="true-north-logo" x="554" y="0" width="120" height="120" preserveAspectRatio="xMidYMid meet" href="{{LOGO_DATA_URI}}"></image>
+</g>
+</svg>
