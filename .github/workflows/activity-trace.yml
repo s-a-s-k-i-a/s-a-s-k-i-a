@@ -45,6 +45,10 @@ jobs:
       - name: Check generated diff
         run: git diff --check
 
+      - name: Verify committed assets are reproducible
+        if: github.event_name == 'pull_request'
+        run: git diff --exit-code -- assets/profile/activity-trace
+
       - name: Commit changed aggregate assets
         if: github.event_name != 'pull_request'
         run: |
