@@ -71,5 +71,5 @@ jobs:
             assets/profile/activity-trace/desktop.png \
             assets/profile/activity-trace/mobile.svg \
             assets/profile/activity-trace/mobile.png
-          git commit -m "chore(profile): refresh activity trace [skip ci]"
+          git commit -m "chore(profile): refresh activity trace"
           git push
