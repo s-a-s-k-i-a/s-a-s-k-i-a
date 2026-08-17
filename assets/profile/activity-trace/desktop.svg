@@ -41,7 +41,7 @@
   <rect x="0" y="0" width="1280" height="420" rx="28" filter="url(#f-grain)" opacity="0.04"></rect>
 </g>
 
-<g font-family="'Segoe UI','Avenir Next','Helvetica Neue',Arial,sans-serif">
+<g font-family="'Google Sans 18pt',sans-serif">
 
   <g id="header">
     <text x="72" y="66" font-size="14" font-weight="700" letter-spacing="2.6" fill="#584D97">ACTIVITY TRACE · PRIVATE-INCLUSIVE AGGREGATES</text>

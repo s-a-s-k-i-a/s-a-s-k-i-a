@@ -4,11 +4,13 @@ import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import test from "node:test";
 
-import sharp from "sharp";
-
 import {
   ASSET_DIR,
   DATA_PATH,
+  FONT_BOLD_PATH,
+  FONT_BOLD_SHA256,
+  FONT_REGULAR_PATH,
+  FONT_REGULAR_SHA256,
   LOGO_SHA256,
   TOP_LEVEL_KEYS,
   VARIANTS,
@@ -19,6 +21,16 @@ import {
 } from "./activity-trace.mjs";
 
 const ROOT = resolve(ASSET_DIR, "../../..");
+
+function readPngDimensions(bytes) {
+  assert.equal(bytes.subarray(0, 8).toString("hex"), "89504e470d0a1a0a");
+  assert.equal(bytes.subarray(12, 16).toString("ascii"), "IHDR");
+  return {
+    width: bytes.readUInt32BE(16),
+    height: bytes.readUInt32BE(20),
+    colorType: bytes.readUInt8(25),
+  };
+}
 
 test("parses only aggregate values from the two sources", () => {
   const statsSvg = `
@@ -110,6 +122,17 @@ test("hero keeps the approved animation and a real static fallback", async () =>
   }
 });
 
+test("renderer uses the pinned regular and bold Isla font instances", async () => {
+  const fonts = [
+    [FONT_REGULAR_PATH, FONT_REGULAR_SHA256],
+    [FONT_BOLD_PATH, FONT_BOLD_SHA256],
+  ];
+  for (const [path, expectedHash] of fonts) {
+    const font = await readFile(path);
+    assert.equal(createHash("sha256").update(font).digest("hex"), expectedHash);
+  }
+});
+
 for (const [name, variant] of Object.entries(VARIANTS)) {
   test(`${name} output contains current aggregates and the canonical raster logo`, async () => {
     const data = JSON.parse(await readFile(DATA_PATH, "utf8"));
@@ -131,7 +154,8 @@ for (const [name, variant] of Object.entries(VARIANTS)) {
       .digest("hex");
     assert.equal(logoHash, LOGO_SHA256);
 
-    const metadata = await sharp(resolve(ASSET_DIR, `${name}.png`)).metadata();
+    const png = await readFile(resolve(ASSET_DIR, `${name}.png`));
+    const metadata = readPngDimensions(png);
     assert.equal(metadata.width, variant.outputWidth);
     assert.equal(
       metadata.height,
@@ -142,6 +166,6 @@ for (const [name, variant] of Object.entries(VARIANTS)) {
             : 680 / variant.logicalWidth),
       ),
     );
-    assert.equal(metadata.hasAlpha, true);
+    assert.ok([4, 6].includes(metadata.colorType), "PNG keeps an alpha channel");
   });
 }

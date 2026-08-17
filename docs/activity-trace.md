@@ -24,6 +24,11 @@ The True North mark is the canonical transparent Isla Studio PNG, copied byte-fo
 - file: `assets/profile/activity-trace/true-north-icon.png`
 - SHA-256: `cd4b188bca3bd43dd8e70ceb6811e286f9a9d14253b02dfcfa33fcd62e2589bc`
 
+The rasterizer loads pinned regular and bold instances of the variable Google Sans 18pt font shipped with the current Isla website and disables system-font fallback. This preserves the approved typography while keeping line breaks and pixels reproducible on macOS and GitHub's Linux runners. The bundled fonts remain under the SIL Open Font License in `assets/profile/activity-trace/fonts/`.
+
+- regular SHA-256: `ca12ffcf9fb834eb6f97ca7a53d014c3792b7c93ac940c35529af9ac2c0a7e4d`
+- bold SHA-256: `620fdb4bb3a7306d8042100311bd84f0ecab3d09253572220a8cbcc3bb3fc893`
+
 ## Refresh and verification
 
 ```bash

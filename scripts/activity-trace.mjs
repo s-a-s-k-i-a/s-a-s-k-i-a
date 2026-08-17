@@ -3,13 +3,18 @@ import { readFile, writeFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
-import sharp from "sharp";
+import { Resvg } from "@resvg/resvg-js";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const ASSET_DIR = resolve(ROOT, "assets/profile/activity-trace");
 const TEMPLATE_DIR = resolve(ASSET_DIR, "templates");
 const DATA_PATH = resolve(ASSET_DIR, "data.json");
 const LOGO_PATH = resolve(ASSET_DIR, "true-north-icon.png");
+const FONT_REGULAR_PATH = resolve(
+  ASSET_DIR,
+  "fonts/GoogleSans-Latin-Regular.ttf",
+);
+const FONT_BOLD_PATH = resolve(ASSET_DIR, "fonts/GoogleSans-Latin-Bold.ttf");
 
 const USERNAME = "s-a-s-k-i-a";
 const STATS_URL =
@@ -21,6 +26,10 @@ const PUBLIC_COMMITS_URL =
 
 const LOGO_SHA256 =
   "cd4b188bca3bd43dd8e70ceb6811e286f9a9d14253b02dfcfa33fcd62e2589bc";
+const FONT_REGULAR_SHA256 =
+  "ca12ffcf9fb834eb6f97ca7a53d014c3792b7c93ac940c35529af9ac2c0a7e4d";
+const FONT_BOLD_SHA256 =
+  "620fdb4bb3a7306d8042100311bd84f0ecab3d09253572220a8cbcc3bb3fc893";
 
 const TOP_LEVEL_KEYS = [
   "schemaVersion",
@@ -375,27 +384,46 @@ export function hydrateTemplate(template, data, logoDataUri, variantName) {
   return svg;
 }
 
-async function logoDataUri() {
-  const logo = await readFile(LOGO_PATH);
-  const hash = createHash("sha256").update(logo).digest("hex");
-  if (hash !== LOGO_SHA256) {
-    throw new Error(`True North logo hash changed unexpectedly: ${hash}`);
+async function verifiedAsset(path, expectedHash, label) {
+  const asset = await readFile(path);
+  const hash = createHash("sha256").update(asset).digest("hex");
+  if (hash !== expectedHash) {
+    throw new Error(`${label} hash changed unexpectedly: ${hash}`);
   }
+  return asset;
+}
+
+async function logoDataUri() {
+  const logo = await verifiedAsset(LOGO_PATH, LOGO_SHA256, "True North logo");
   return `data:image/png;base64,${logo.toString("base64")}`;
 }
 
 export async function renderActivityTrace(data) {
   validateActivityData(data);
   const embeddedLogo = await logoDataUri();
+  await Promise.all([
+    verifiedAsset(
+      FONT_REGULAR_PATH,
+      FONT_REGULAR_SHA256,
+      "Google Sans regular font",
+    ),
+    verifiedAsset(FONT_BOLD_PATH, FONT_BOLD_SHA256, "Google Sans bold font"),
+  ]);
 
   for (const [name, variant] of Object.entries(VARIANTS)) {
     const template = await readFile(resolve(TEMPLATE_DIR, `${name}.svg`), "utf8");
     const svg = hydrateTemplate(template, data, embeddedLogo, name);
     await writeFile(resolve(ASSET_DIR, `${name}.svg`), svg);
-    await sharp(Buffer.from(svg))
-      .resize({ width: variant.outputWidth })
-      .png({ compressionLevel: 9, palette: false })
-      .toFile(resolve(ASSET_DIR, `${name}.png`));
+    const renderer = new Resvg(svg, {
+      fitTo: { mode: "width", value: variant.outputWidth },
+      font: {
+        fontFiles: [FONT_REGULAR_PATH, FONT_BOLD_PATH],
+        loadSystemFonts: false,
+        defaultFontFamily: "Google Sans 18pt",
+      },
+    });
+    const png = renderer.render().asPng();
+    await writeFile(resolve(ASSET_DIR, `${name}.png`), png);
   }
 }
 
@@ -427,4 +455,15 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   await main();
 }
 
-export { ASSET_DIR, DATA_PATH, LOGO_PATH, LOGO_SHA256, TOP_LEVEL_KEYS, VARIANTS };
+export {
+  ASSET_DIR,
+  DATA_PATH,
+  FONT_BOLD_PATH,
+  FONT_BOLD_SHA256,
+  FONT_REGULAR_PATH,
+  FONT_REGULAR_SHA256,
+  LOGO_PATH,
+  LOGO_SHA256,
+  TOP_LEVEL_KEYS,
+  VARIANTS,
+};
