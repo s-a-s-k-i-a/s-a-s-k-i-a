@@ -61,11 +61,11 @@
     <text id="all-time-contributions" x="96" y="238" font-size="64" font-weight="700" letter-spacing="-2" fill="#2E2766">7,353</text>
 
     <text x="510" y="174" font-size="11.5" font-weight="700" letter-spacing="1.8" fill="#584D97">LAST 12 MONTHS</text>
-    <text id="rolling-contributions" x="508" y="214" font-size="33" font-weight="700" letter-spacing="-0.6" fill="#2E2766">6,938</text>
+    <text id="rolling-contributions" x="508" y="214" font-size="33" font-weight="700" letter-spacing="-0.6" fill="#2E2766">6,937</text>
     <text x="510" y="238" font-size="12" font-weight="600" letter-spacing="1" fill="#6B6191"><tspan id="rolling-percent">94</tspan>% OF ALL-TIME ACTIVITY</text>
 
     <rect x="100" y="254" width="628" height="42" rx="21" fill="#E8E1F1" stroke="#322a6f" stroke-opacity="0.14" stroke-width="1.5"></rect>
-    <rect data-role="rolling-fill" x="100" y="254" width="593" height="42" rx="21" fill="url(#g-stream)" stroke="#322a6f" stroke-width="2.5" filter="url(#f-lift)"></rect>
+    <rect data-role="rolling-fill" x="100" y="254" width="592" height="42" rx="21" fill="url(#g-stream)" stroke="#322a6f" stroke-width="2.5" filter="url(#f-lift)"></rect>
     <path d="M 124 275 H 704" fill="none" stroke="#322a6f" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="0.1 13" opacity="0.43"></path>
   </g>
 
